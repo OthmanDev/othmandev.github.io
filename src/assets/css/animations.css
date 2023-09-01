@@ -1,0 +1,28 @@
+@keyframes slide {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@layer components {
+  .loader {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-dark-100;
+  }
+  .loader div:before {
+    content: "Loading";
+    @apply w-full absolute top-0 left-0 overflow-hidden text-primary;
+    border-right: 5px solid;
+    animation: 3s slide linear infinite;
+  }
+  .loader.slide-out div {
+    opacity: 0;
+  }
+  .loader.slide-out {
+    @apply transition-all duration-500 -translate-x-full;
+  }
+}
