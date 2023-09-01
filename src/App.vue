@@ -797,7 +797,7 @@
         </div>
       </div>
     </section>
-    <section id="testimonials" class="pt-8 pb-16 md:pt-4 md:pb-8 hidden">
+    <section id="testimonials" class="pt-8 pb-16 md:pt-4 md:pb-8">
       <div class="container">
         <div class="mb-8 md:mb-6">
           <div class="border-b border-white border-opacity-10 pb-5 md:pb-0 md:border-0">
