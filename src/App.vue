@@ -266,6 +266,7 @@
           message: ''
         },
         sended: false,
+        sending: false,
         emailResponse: {
           status: false,
           message: '',
@@ -394,6 +395,7 @@
     },
     methods: {
       async sendMessage () {
+        this.sending = true
         try {
           this.form.message = this.form.name + ' Sent you a message: ' + this.form.message + ' SUBJECT: ' + this.form.subject
           await emailjs.send(
@@ -415,6 +417,7 @@
             subject: '',
             message: ''
           }
+          this.sending = false
           setTimeout(() => {
             this.emailResponse.status  = false
           }, 5000)
@@ -424,6 +427,7 @@
             message: "Unfortunately, there was an issue while attempting to send your message. Please try again. If the problem persists, feel free to contact me through othmandeveloppeur@gmail.com.",
             type: 'error'
           }
+          this.sending = false
           setTimeout(() => {
             this.emailResponse.status  = false
           }, 5000)
@@ -885,9 +889,9 @@
                   <textarea v-model="form.message" class="border border-white border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" rows="8" placeholder="Message" required />
                 </div>
                 <div class="flex-1">
-                  <button type="submit" class="relative overflow-hidden border border-white border-opacity-10 uppercase text-white tracking-widest bg-transparent px-4 py-5 leading-none flex items-center justify-center rounded-lg w-full group transition-colors duration-500 hover:text-black">
+                  <button type="submit" class="relative overflow-hidden border border-white border-opacity-10 uppercase text-white tracking-widest bg-transparent px-4 py-5 leading-none flex items-center justify-center rounded-lg w-full group transition-colors duration-500 hover:text-black h-14  outline-none" :class="{ 'sending cursor-not-allowed': sending }">
                     Send a message
-                    <span class="absolute inset-0 w-1.5 bg-primary transition-all duration-500 group-hover:w-full -z-10"></span>
+                    <span v-if="!sending" class="absolute inset-0 w-1.5 bg-primary transition-all duration-500 group-hover:w-full -z-10"></span>
                   </button>
                 </div>
               </form>

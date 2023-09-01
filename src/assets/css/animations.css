@@ -9,6 +9,11 @@
     width: 0;
   }
 }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @layer components {
   .loader {
     @apply fixed inset-0 z-50 flex items-center justify-center bg-dark-100;
@@ -24,5 +29,14 @@
   }
   .loader.slide-out {
     @apply transition-all duration-500 -translate-x-full;
+  }
+  .sending {
+    font-size: 0;
+  }
+  .sending:before {
+    content: "";
+    @apply rounded-full w-6 h-6 border-2 border-white border-opacity-10;
+    border-top-color: #EEE;
+    animation: 1.5s spin infinite linear;
   }
 }
