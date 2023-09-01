@@ -652,7 +652,7 @@
           <div class="flex items-start justify-between gap-24 md:flex-col md:gap-6">
             <div class="w-author sticky top-20 md:top-0 md:relative md:w-full">
               <div class="grid gap-6">
-                <div class="bg-primary rounded-xl">
+                <div class="bg-primary rounded-xl overflow-hidden relative blur-image">
                   <img src="/profile.webp" loading="lazy" alt="Othmane Gourirran" class="w-full h-auto" width="400" height="410" />
                 </div>
                 <div class="grid gap-5">
