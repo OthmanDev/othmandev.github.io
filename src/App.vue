@@ -649,7 +649,7 @@
           <div class="w-author sticky top-20 md:top-0 md:relative md:w-full">
             <div class="grid gap-6">
               <div class="bg-primary rounded-xl">
-                <img src="profile.webp" loading="lazy" alt="Othmane Gourirran" class="w-full h-auto" width="400" height="410" />
+                <img src="/profile.webp" loading="lazy" alt="Othmane Gourirran" class="w-full h-auto" width="400" height="410" />
               </div>
               <div class="grid gap-5">
                 <div class="text-center grid gap-2">
@@ -844,7 +844,7 @@
                   <span class="text-xs text-dark-75 leading-none pt-1">{{ testimonial.reviews }} reviews</span>
                 </div>
                 <div class="w-10 h-10">
-                  <img src="quote.webp" :alt="testimonial.author.name" class="w-full h-full"/>
+                  <img src="/quote.webp" :alt="testimonial.author.name" class="w-full h-full"/>
                 </div>
               </div>
             </div>
