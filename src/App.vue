@@ -863,7 +863,7 @@
               <span class="uppercase text-xs leading-none text-black bg-white rounded-lg tracking-wide py-3 px-4 inline-block">Get In Touch</span>
               <h2 class="text-5xl mt-4 mb-4 leading-tight md:text-4xl md:leading-tight">Let's collaborate to create outstanding web experiences.</h2>
               <p class="text-dark-75 font-extralight text-base leading-normal mb-10 md:mb-6">If you would like to work with us or just want to get in touch, we'd love <br /> to hear from you!</p>
-              <a href="#" class="text-primary text-3xl font-medium underline md:text-2xl">+212 627329145</a>
+              <a href="//api.whatsapp.com/send?phone=212627329145" target="_blank" class="text-primary text-3xl font-medium underline md:text-2xl">+212 627329145</a>
             </div>
             <div class="flex-1 md:w-full">
               <div v-if="emailResponse.status" class="rounded-lg p-4 mb-7 md:mb-5" :class="[ emailResponse.type === 'success' ? 'bg-success-50' : 'bg-error-50']">
