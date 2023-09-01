@@ -696,7 +696,7 @@
                     <p class="text-base font-extralight text-dark-75">Years <br /> of Experance</p>
                   </div>
                   <div class="flex items-center gap-5 md:gap-3">
-                    <h2 class="text-7xl md:text-5xl">35</h2>
+                    <h2 class="text-7xl md:text-5xl">31</h2>
                     <p class="text-base font-extralight text-dark-75">Clients <br /> Worldwide</p>
                   </div>
                   <div class="md:col-span-2">
