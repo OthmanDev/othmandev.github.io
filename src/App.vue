@@ -53,13 +53,13 @@
           {
             period: '04/21 - Present',
             company: 'Protect',
-            role: 'Front End Engineer',
+            role: 'Front End Developer',
             link: 'https://protect.inc'
           },
           {
             period: '04/21 - Present',
             company: 'Le ventures',
-            role: 'Front End Engineer',
+            role: 'Front End Developer',
             link: 'https://leventures.com'
           },
           {
@@ -242,19 +242,28 @@
           {
             author: {
               name: 'Mohamed El Ghaissani',
-              title: 'CEO & Co Founder, YouCan Inc.',
-              image: 'elghissani-mohamed.jpeg'
+              title: 'CEO & Founder, YouCan Inc.',
+              image: 'elghissani-mohamed.webp'
             },
-            quote: "Crafting captivating user experiences through code is not just a job for Othmane, it's a passion. With an expert command over front-end technologies, Othmane brings life to designs and transforms ideas into interactive digital realities. Creating seamless journeys for users. As a Front-end Engineer, Othmane illuminates the path where creativity and technology converge.",
+            quote: "Crafting captivating user experiences through code is not just a job for Othmane, it's a passion. With an expert command over front-end technologies, Othmane brings life to designs and transforms ideas into interactive digital realities. Creating seamless journeys for users. As a Front-end Developer, Othmane illuminates the path where creativity and technology converge.",
             reviews: 5
           },
           {
             author: {
-              name: 'Mohamed El Ghaissani',
-              title: 'CEO & Co Founder, YouCan Inc.',
-              image: 'elghissani-mohamed.jpeg'
+              name: 'Khoi Le',
+              title: 'CEO & Founder, Protect Inc.',
+              image: 'khoi-le.webp'
             },
-            quote: "Crafting captivating user experiences through code is not just a job for Othmane, it's a passion. With an expert command over front-end technologies, Othmane brings life to designs and transforms ideas into interactive digital realities. Creating seamless journeys for users. As a Front-end Engineer, Othmane illuminates the path where creativity and technology converge.",
+            quote: "We've had the pleasure of working with Othmane, and he's truly transformed our digital presence. his coding skills bring our designs to life, resulting in beautiful and user-friendly websites. Othmane is reliable, efficient, and pays attention to detail, ensuring our projects are completed to perfection. his creative problem-solving abilities have been invaluable to our team.",
+            reviews: 5
+          },
+          {
+            author: {
+              name: 'Anass Ezzouine',
+              title: 'CEO & Founder, Tekency.',
+              image: 'anas-ezzouine.webp'
+            },
+            quote: "We've had the privilege of working closely with Othmane, and his impact on our projects has been remarkable. his coding prowess, combined with a keen eye for design, consistently delivers websites that not only look stunning but also function seamlessly. Othmane is not just a developer but a problem-solving artist, able to find elegant solutions to complex challenges.",
             reviews: 5
           },
         ],
@@ -287,111 +296,6 @@
           }, 500)
         })
       }
-      particlesJS("particles-js", {
-        "particles": {
-          "number": {
-            "value": 150,
-            "density": {
-              "enable": true,
-              "value_area": 700
-            }
-          },
-          "color": {
-              "value": ["#fff", "#fff", "#fff", "#fff"]
-          },
-          "shape": {
-            "type": "circle",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
-            },
-            "polygon": {
-              "nb_sides": 15
-            }
-          },
-          "opacity": {
-            "value": 0.8,
-            "random": false,
-            "anim": {
-              "enable": false,
-              "speed": 1.5,
-              "opacity_min": 0.15,
-              "sync": false
-            }
-          },
-          "size": {
-            "value": 2.5,
-            "random": false,
-            "anim": {
-              "enable": true,
-              "speed": 2,
-              "size_min": 0.15,
-              "sync": false
-            }
-          },
-          "line_linked": {
-            "enable": true,
-            "distance": 110,
-            "color": "#F5C332",
-            "opacity": 0.25,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 1.6,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": false,
-              "mode": "repulse"
-            },
-            "onclick": {
-              "enable": false,
-              "mode": "push"
-            },
-            "resize": true
-          },
-          "modes": {
-            "grab": {
-              "distance": 400,
-              "line_linked": {
-                "opacity": 1
-              }
-            },
-            "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
-            },
-            "repulse": {
-              "distance": 200,
-              "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
-            }
-          }
-        },
-        "retina_detect": true
-    })
     },
     methods: {
       async sendMessage () {
@@ -450,7 +354,6 @@
     <Cursor />
     <Loader :class="{ 'slide-out': !loading }" />
     <ScrollToTop />
-    <div id="particles-js" class="fixed bottom-0 left-0 w-full opacity-50 h-2/3 -z-10"></div>
     <header class="py-2.5 md:border-b md:border-dark-75 md:border-opacity-10">
       <div class="container">
         <div class="flex items-center justify-between relative">
@@ -693,7 +596,7 @@
             </div>
             <div class="flex-1">
               <div class="grid gap-16 md:gap-8">
-                <h1 class="text-6xl leading-normal md:text-3xl md:leading-normal">Hello, I’m <span class="text-primary">Othmane Gourirran</span>, <span class="bord">Front-end Engineer<i></i></span> Based in Morocco.</h1>
+                <h1 class="text-6xl leading-normal md:text-3xl md:leading-normal">Hello, I’m <span class="text-primary">Othmane Gourirran</span>, <span class="bord">Front-end Developer<i></i></span> Based in Morocco.</h1>
                 <div class="flex items-center gap-20 md:grid md:grid-cols-2 md:gap-6">
                   <div class="flex items-center gap-5 md:gap-3">
                     <h2 class="text-7xl md:text-5xl">7</h2>
@@ -711,23 +614,23 @@
                   <div class="border-b border-white border-opacity-10 pb-5 md:pb-0 md:border-0">
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">About</h3>
                   </div>
-                  <p class="text-dark-75 text-lg font-extralight leading-8 md:text-base">A highly skilled and experienced front-end developer with a passion for crafting elegant and user-friendly web interfaces. With 7 years of hands-on experience in front-end development, I have honed my skills in HTML, CSS, and JavaScript to create seamless and responsive web applications.</p>
+                  <p class="text-dark-75 text-lg font-extralight leading-8 md:text-base">A highly skilled and experienced Front-end Developer with a passion for crafting elegant and user-friendly web interfaces. With 7 years of hands-on experience in front-end development, I have honed my skills in HTML, CSS, and JavaScript to create seamless and responsive web applications.</p>
                 </div>
                 <div class="grid gap-8 md:gap-6">
                   <div class="border-b border-white border-opacity-10 pb-5 md:pb-0 md:border-0">
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">Experience Porfessional</h3>
                   </div>
                   <div class="grid gap-6 md:gap-5">
-                    <div v-for="(experience, key) in experiences" class="flex items-center justify-between gap-12 md:gap-5 md:pb-5 border-b border-white pb-6 border-opacity-10" :key="key">
+                    <div v-for="(experience, key) in experiences" class="flex items-center justify-between gap-12 md:gap-5 md:pb-5 border-b border-white pb-6 border-opacity-10 sm:flex-col sm:border sm:rounded-lg sm:p-4" :key="key">
                       <div class="rounded-lg py-2 text-center text-xs text-black w-date bg-white bg-opacity-90">
                         {{ experience.period }}
                       </div>
-                      <div class="flex-1">
+                      <div class="flex-1 sm:text-center">
                         <h3 class="text-xl md:text-lg">
                           <a :href="experience.link" target="_blank" class="text-primary uppercase tracking-widest hover:brightness-105">{{ experience.company }}</a> - {{ experience.role }}
                         </h3>
                       </div>
-                      <div>
+                      <div class="sm:hidden">
                         <a :href="experience.link" target="_blank" :aria-label="experience.company" class="w-6 h-6 flex items-center justify-center group md:w-4 md:h-4">
                           <ArrowRightIcon class="w-full stroke-2 stroke-white transition-colors group-hover:stroke-primary" />
                         </a>
@@ -830,16 +733,16 @@
           >
             <swiper-slide v-for="(testimonial, key) in testimonials" :key="key">
               <div class="relative border border-white border-opacity-10 rounded-xl p-7 estimonials-shadow overflow-hidden md:p-5">
-                <div class="flex items-center gap-7 md:gap-5 md:flex-col">
-                  <div class="w-24 h-24 bg-primary rounded-lg overflow-hidden">
-                    <img :src="`/testimonials/${testimonial.author.image}`" loading="lazy" :alt="testimonial.author.name" class="w-full h-full object-cover"/>
+                <div class="flex items-center gap-7 md:gap-5">
+                  <div class="w-24 h-24 bg-primary rounded-lg overflow-hidden relative">
+                    <img :src="`/testimonials/${testimonial.author.image}`" loading="lazy" :alt="testimonial.author.name" class="w-full h-full object-cover object-center absolute"/>
                   </div>
                   <div class="flex-1">
-                    <h4 class="text-primary text-2xl mb-2.5 leading-none">{{ testimonial.author.name }}</h4>
+                    <h4 class="text-primary text-2xl md:text-xl mb-2.5 leading-none">{{ testimonial.author.name }}</h4>
                     <span class="text-base text-dark-75">{{ testimonial.author.title }}</span>
                   </div>
                 </div>
-                <div class="mt-7 mb-4 md:mt-5 md:text-center md:mb-3">
+                <div class="mt-7 mb-4 md:mt-5 md:mb-3">
                   <p class="text-lg text-dark-75 font-extralight md:text-base">{{ testimonial.quote }}</p>
                 </div>
                 <div class="flex items-center justify-between">
