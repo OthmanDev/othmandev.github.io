@@ -30,7 +30,7 @@
 </script>
 
 <template>
-  <div @click="scrollToTop" :class="[ isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' ]" class="fixed bottom-8 right-8 z-50 cursor-pointer w-11 h-11 rounded-full transition-all text-black bg-dark-75 flex items-center justify-center transform hover:bg-primary duration-500">
+  <div @click="scrollToTop" :class="[ isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' ]" class="fixed bottom-8 right-8 z-50 cursor-pointer w-11 h-11 rounded-full transition-all text-white bg-dark-100 bg-opacity-90 dark:bg-opacity-100 dark:text-black dark:bg-dark-75 flex items-center justify-center transform hover:bg-primary duration-500">
     <UpIcon class="w-4 h-4" />
   </div>
 </template>

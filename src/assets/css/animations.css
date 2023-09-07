@@ -16,7 +16,7 @@
 }
 @layer components {
   .loader {
-    @apply fixed inset-0 z-50 flex items-center justify-center bg-dark-100;
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-dark-100;
   }
   .loader div:before {
     content: "Loading";
@@ -35,8 +35,14 @@
   }
   .sending:before {
     content: "";
-    @apply rounded-full w-6 h-6 border-2 border-white border-opacity-10;
+    @apply rounded-full w-6 h-6 border-2 border-white border-opacity-0;
+    border-top-color: #000;
+    animation: 1.5s spin infinite linear;
+  }
+  .dark .sending:before {
     border-top-color: #EEE;
+  }
+  .spinner {
     animation: 1.5s spin infinite linear;
   }
 }

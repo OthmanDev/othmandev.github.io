@@ -47,6 +47,9 @@
   }
   .bord {
     @apply px-5 relative inline-block md:px-0;
+    border: 1px solid rgba(0, 0, 0, .1);
+  }
+  .dark .bord {
     border: 1px solid rgba(255, 255, 255, .1);
   }
   .bord:before,
@@ -54,7 +57,7 @@
   .bord i:before,
   .bord i:after {
     content: '';
-    @apply w-1.5 h-1.5 rounded-full bg-white absolute pointer-events-none;
+    @apply w-1.5 h-1.5 rounded-full bg-black dark:bg-white absolute pointer-events-none;
   }
   .bord:before {
     top: -3px;
@@ -85,7 +88,8 @@
     @apply bottom-0 left-0;
   }
   @media (max-width: 992px) {
-    .bord {
+    .bord,
+    .dark .bord {
       border: 0;
     }
     .bord:before,

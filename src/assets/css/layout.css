@@ -8,7 +8,7 @@
     display: none
   }
   body {
-    @apply font-sora bg-dark-100 text-sm text-white;
+    @apply font-sora bg-white text-sm text-black dark:text-white dark:bg-dark-100;
   }
   body:before,
   body:after {

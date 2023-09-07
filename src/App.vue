@@ -5,6 +5,7 @@
   import Cursor from './components/AppCursor.vue'
   import Loader from './components/AppLoading.vue'
   import ScrollToTop from './components/ScrollToTop.vue'
+  import SwitchTheme from './components/SwitchTheme.vue'
   import FacebookIcon from './components/icons/FacebookIcon.vue'
   import LinkedinIcon from './components/icons/LinkedincIcon.vue'
   import GithubIcon from './components/icons/GithubIcon.vue'
@@ -22,12 +23,14 @@
   import StarIcon from './components/icons/StarIcon.vue'
   import CopyrightIcon from './components/icons/CopyrightIcon.vue'
   import MenuIcon from './components/icons/MenuIcon.vue'
+  import LogoIcon from './components/icons/LogoIcon.vue'
 
   export default {
     components: {
       Cursor,
       Loader,
       ScrollToTop,
+      SwitchTheme,
       FacebookIcon,
       LinkedinIcon,
       GithubIcon,
@@ -44,7 +47,8 @@
       VueIcon,
       StarIcon,
       CopyrightIcon,
-      MenuIcon
+      MenuIcon,
+      LogoIcon
     },
     data() {
       return {
@@ -296,6 +300,11 @@
           }, 500)
         })
       }
+      if ((window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.querySelector('html').classList.add('dark')
+      } else {
+        document.querySelector('html').classList.remove('dark')
+      }
     },
     methods: {
       async sendMessage () {
@@ -354,14 +363,15 @@
     <Cursor />
     <Loader :class="{ 'slide-out': !loading }" />
     <ScrollToTop />
-    <header class="py-2.5 md:border-b md:border-dark-75 md:border-opacity-10">
+    <SwitchTheme />
+    <header class="py-2.5 md:border-b md:border-dark-75 dark:md:border-dark-75 md:border-opacity-50 dark:md:border-opacity-10">
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="flex items-center justify-between md:w-full">
-            <a href="/" class="flex items-center w-40 -ml-2 outline-none md:w-36">
-              <img src="./assets/logo.svg" loading="lazy" alt="Othmane Gourirran" class="w-full h-auto" width="160" height="51"/>
+            <a href="/" class="flex items-center w-40 -ml-2 outline-none md:w-36 text-black dark:text-white">
+              <LogoIcon class="w-full" />
             </a>
-            <div @click="isMenuCollapsed = !isMenuCollapsed" class="text-white hidden md:block">
+            <div @click="isMenuCollapsed = !isMenuCollapsed" class="dark:text-white text-black hidden md:block">
               <MenuIcon class="w-5 h-5" />
             </div>
           </div>
@@ -375,7 +385,7 @@
                     <span class="letter">M</span>
                     <span class="letter">E</span>
                   </div>
-                  <div class="text-primary hover:brightness-105">
+                  <div class="text-primary dark:hover:brightness-105">
                     <span class="letter">H</span>
                     <span class="letter">O</span>
                     <span class="letter">M</span>
@@ -394,7 +404,7 @@
                     <span class="letter">U</span>
                     <span class="letter">T</span>
                   </div>
-                  <div class="text-primary hover:brightness-105">
+                  <div class="text-primary dark:hover:brightness-105">
                     <span class="letter">A</span>
                     <span class="letter">B</span>
                     <span class="letter">O</span>
@@ -417,7 +427,7 @@
                     <span class="letter">E</span>
                     <span class="letter">S</span>
                   </div>
-                  <div class="text-primary hover:brightness-105">
+                  <div class="text-primary dark:hover:brightness-105">
                     <span class="letter">S</span>
                     <span class="letter">E</span>
                     <span class="letter">R</span>
@@ -444,7 +454,7 @@
                     <span class="letter">I</span>
                     <span class="letter">O</span>
                   </div>
-                  <div class="text-primary hover:brightness-105">
+                  <div class="text-primary dark:hover:brightness-105">
                     <span class="letter">P</span>
                     <span class="letter">O</span>
                     <span class="letter">R</span>
@@ -475,7 +485,7 @@
                     <span class="letter">L</span>
                     <span class="letter">S</span>
                   </div>
-                  <div class="text-primary hover:brightness-105">
+                  <div class="text-primary dark:hover:brightness-105">
                     <span class="letter">T</span>
                     <span class="letter">E</span>
                     <span class="letter">S</span>
@@ -504,7 +514,7 @@
                     <span class="letter">C</span>
                     <span class="letter">T</span>
                   </div>
-                  <div class="text-primary hover:brightness-105">
+                  <div class="text-primary dark:hover:brightness-105">
                     <span class="letter">C</span>
                     <span class="letter">O</span>
                     <span class="letter">N</span>
@@ -517,7 +527,7 @@
               </a>
             </li>
           </ul>
-          <ul v-if="isMenuCollapsed" class="hidden md:absolute md:top-full md:grid md:justify-normal md:z-10 md:mt-3 md:bg-dark-header md:gap-0 md:-mx-4 md:w-header">
+          <ul v-if="isMenuCollapsed" class="hidden md:absolute md:top-full md:grid md:justify-normal md:z-10 md:mt-3 bg-header dark:md:bg-dark-header md:gap-0 md:-mx-4 md:w-header">
             <li>
               <a href="/" class="text-sm uppercase tracking-widest md:block md:w-full md:p-4">
                 Home
@@ -566,27 +576,27 @@
                   <div class="text-center grid gap-2">
                     <h5 class="text-2xl">Othmane Gourirran</h5>
                     <p>
-                      <a href="https://www.upwork.com/freelancers/~01aebf796030857cd1" target="_blank" class="text-base font-extralight text-dark-75">@OthmanG</a>
+                      <a href="https://www.upwork.com/freelancers/~01aebf796030857cd1" target="_blank" class="text-base font-extralight text-paragraph dark:text-dark-75">@OthmanG</a>
                     </p>
                   </div>
                   <ul class="flex items-center justify-center gap-4">
                     <li>
-                      <a href="https://facebook.com/othman.gourriran" target="_blank" aria-label="Othmane Gourirran Facebook" class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white border-opacity-50 transition-all duration-500 hover:bg-white hover:text-black">
+                      <a href="https://facebook.com/othman.gourriran" target="_blank" aria-label="Othmane Gourirran Facebook" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
                         <FacebookIcon class="w-3.5 h-3.5" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/in/othman-gourirran-2932a5127" aria-label="Othmane Gourirran Linkedin" target="_blank" class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white border-opacity-50 duration-500 transition-all hover:bg-white hover:text-black">
+                      <a href="https://www.linkedin.com/in/othman-gourirran-2932a5127" aria-label="Othmane Gourirran Linkedin" target="_blank" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
                         <LinkedinIcon class="w-3.5 h-3.5" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/OthmanDev" target="_blank" aria-label="Othmane Gourirran Github" class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white border-opacity-50 transition-all duration-500 hover:bg-white hover:text-black">
+                      <a href="https://github.com/OthmanDev" target="_blank" aria-label="Othmane Gourirran Github" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
                         <GithubIcon class="w-3.5 h-3.5" />
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:othmandeveloppeur@gmail.com" target="_blank" aria-label="Othmane Gourirran Email" class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white border-opacity-50 transition-all duration-500 hover:bg-white hover:text-black">
+                      <a href="mailto:othmandeveloppeur@gmail.com" target="_blank" aria-label="Othmane Gourirran Email" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
                         <EmailIcon class="w-3.5 h-3.5" />
                       </a>
                     </li>
@@ -596,33 +606,33 @@
             </div>
             <div class="flex-1">
               <div class="grid gap-16 md:gap-8">
-                <h1 class="text-6xl leading-normal md:text-3xl md:leading-normal">Hello, I’m <span class="text-primary">Othmane Gourirran</span>, <span class="bord">Front-end Developer<i></i></span> Based in Morocco.</h1>
+                <h1 class="text-6xl leading-normal md:text-4xl md:leading-normal sm:text-center">Hello, I’m <span class="text-primary">Othmane Gourirran</span>. An expert <span class="bord">Front-end Developer<i></i></span> Based in Morocco.</h1>
                 <div class="flex items-center gap-20 md:grid md:grid-cols-2 md:gap-6">
                   <div class="flex items-center gap-5 md:gap-3">
                     <h2 class="text-7xl md:text-5xl">7</h2>
-                    <p class="text-base font-extralight text-dark-75">Years <br /> of Experance</p>
+                    <p class="text-base font-extralight text-paragraph dark:text-dark-75">Years <br /> of Experance</p>
                   </div>
                   <div class="flex items-center gap-5 md:gap-3">
                     <h2 class="text-7xl md:text-5xl">31</h2>
-                    <p class="text-base font-extralight text-dark-75">Clients <br /> Worldwide</p>
+                    <p class="text-base font-extralight text-paragraph dark:text-dark-75">Clients <br /> Worldwide</p>
                   </div>
                   <div class="md:col-span-2">
                     <a href="othmane.gourirran.pdf" download="othmane.gourirran.pdf" class="text-sm text-black bg-primary px-6 py-4 leading-none flex items-center justify-center rounded-lg tracking-wide hover:brightness-105">Dwonload C.V</a>
                   </div>
                 </div>
                 <div id="about" class="grid gap-5 md:gap-4">
-                  <div class="border-b border-white border-opacity-10 pb-5 md:pb-0 md:border-0">
+                  <div class="border-b border-paragraph dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0 dark:border-white">
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">About</h3>
                   </div>
-                  <p class="text-dark-75 text-lg font-extralight leading-8 md:text-base">A highly skilled and experienced Front-end Developer with a passion for crafting elegant and user-friendly web interfaces. With 7 years of hands-on experience in front-end development, I have honed my skills in HTML, CSS, and JavaScript to create seamless and responsive web applications.</p>
+                  <p class="text-lg font-extralight leading-8 md:text-base text-paragraph dark:text-dark-75">A highly skilled and experienced Front-end Developer with a passion for crafting elegant and user-friendly web interfaces. With 7 years of hands-on experience in front-end development, I have honed my skills in HTML, CSS, and JavaScript to create seamless and responsive web applications.</p>
                 </div>
                 <div class="grid gap-8 md:gap-6">
-                  <div class="border-b border-white border-opacity-10 pb-5 md:pb-0 md:border-0">
+                  <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">Experience Porfessional</h3>
                   </div>
                   <div class="grid gap-6 md:gap-5">
-                    <div v-for="(experience, key) in experiences" class="flex items-center justify-between gap-12 md:gap-5 md:pb-5 border-b border-white pb-6 border-opacity-10 sm:flex-col sm:border sm:rounded-lg sm:p-4" :key="key">
-                      <div class="rounded-lg py-2 text-center text-xs text-black w-date bg-white bg-opacity-90">
+                    <div v-for="(experience, key) in experiences" class="flex items-center justify-between gap-12 md:gap-5 md:pb-5 border-b border-paragraph dark:border-white pb-6 dark:border-opacity-10 border-opacity-10 sm:flex-col sm:border sm:rounded-lg sm:p-4" :key="key">
+                      <div class="rounded-lg py-2 text-center text-xs text-white dark:text-black w-date bg-dark-100 bg-opacity-90 dark:bg-white">
                         {{ experience.period }}
                       </div>
                       <div class="flex-1 sm:text-center">
@@ -632,28 +642,28 @@
                       </div>
                       <div class="sm:hidden">
                         <a :href="experience.link" target="_blank" :aria-label="experience.company" class="w-6 h-6 flex items-center justify-center group md:w-4 md:h-4">
-                          <ArrowRightIcon class="w-full stroke-2 stroke-white transition-colors group-hover:stroke-primary" />
+                          <ArrowRightIcon class="w-full stroke-2 dark:stroke-white stroke-black transition-colors group-hover:stroke-primary" />
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="grid gap-8 md:gap-6">
-                  <div class="border-b border-white border-opacity-10 pb-5 md:pb-0 md:border-0">
+                  <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">Skills</h3>
                   </div>
                   <div class="grid grid-cols-3 gap-7 md:grid-cols-2 md:gap-5 sm-grid-cols-1">
-                    <div v-for="(skill, key) in skills" class="relative border border-white border-opacity-10 rounded-xl px-7 pt-7 md:px-5 md:pt-5" :key="key">
+                    <div v-for="(skill, key) in skills" class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl px-7 pt-7 md:px-5 md:pt-5" :key="key">
                       <div class="flex items-center gap-5 mb-7 md:mb-5">
                         <div class="w-10 h-10">
                           <component :is="skill.icon" class="w-full h-full"/>
                         </div>
                         <h4 class="text-lg capitalize">{{ skill.title }}</h4>
                       </div>
-                      <div class="h-progress relative bg-white bg-opacity-10">
-                        <div class="bg-white h-full absolute transition-all duration-500" :data-progress="skill.progress" :style="{ 'width': skill.progress + '%' }"></div>
+                      <div class="h-progress relative bg-dark-100 dark:bg-white bg-opacity-10">
+                        <div class="bg-dark-100 dark:bg-white h-full absolute transition-all duration-500" :data-progress="skill.progress" :style="{ 'width': skill.progress + '%' }"></div>
                       </div>
-                      <span class="absolute top-2.5 right-2.5 text-badge text-black bg-white px-2.5 py-1 rounded-full bg-opacity-90">{{ skill.progress }}%</span>
+                      <span class="absolute top-2.5 right-2.5 text-badge text-white dark:text-black bg-dark-100 dark:bg-white px-2.5 py-1 rounded-full bg-opacity-90">{{ skill.progress }}%</span>
                     </div>
                   </div>
                 </div>
@@ -665,16 +675,16 @@
       <section id="services" class="pt-8 pb-16 md:pt-4 md:pb-8">
         <div class="container">
           <div class="grid gap-8 md:gap-6">
-            <div class="border-b border-white border-opacity-10 pb-5 md:pb-0 md:border-0">
+            <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
               <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">Services</h3>
             </div>
             <div class="grid grid-cols-4 gap-7 md:grid-cols-2 md:gap-5 sm-grid-cols-1">
-              <div v-for="(service, key) in services" class="relative border border-white border-opacity-10 rounded-xl p-7 md:p-5 transition-all duration-300 hover:bg-white hover:text-black hover:border-opacity-100 group scale-100 hover:scale-105 ease-in-out" :key="key">
+              <div v-for="(service, key) in services" class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl p-7 md:p-5 transition-all duration-300 hover:bg-dark-100 hover:text-white dark:hover:bg-white dark:hover:text-black hover:border-opacity-100 group scale-100 hover:scale-105 ease-in-out" :key="key">
                 <div class="flex flex-col gap-3 mb-2">
                   <h3 class="text-6xl md:text-5xl">{{ service.letter }}</h3>
                   <h4 class="text-lg capitalize">{{ service.title }}</h4>
                 </div>
-                <p class="text-base font-extralight text-dark-75 group-hover:text-black">{{ service.description }}</p>
+                <p class="text-base font-extralight text-paragraph group-hover:text-white dark:text-dark-75 dark:group-hover:text-black">{{ service.description }}</p>
               </div>
             </div>
           </div>
@@ -683,23 +693,23 @@
       <section id="portfolio" class="pt-8 pb-16 md:pt-4 md:pb-8">
         <div class="container">
           <div class="mb-8 md:mb-6">
-            <div class="border-b border-white border-opacity-10 pb-5 md:pb-0 md:border-0">
+            <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
               <h3 class="text-2xl uppercase tracking-widest md:text-xl">Portfolio</h3>
             </div>
           </div>
           <div class="grid grid-cols-3 gap-x-7 gap-y-10 sm-grid-cols-1 md:grid-cols-2 md:gap-y-8 md:gap-x-6">
             <div class="relative group" v-for="(project, key) in projects" :key="key">
-                <div class="h-project overflow-hidden rounded-xl bg-white relative md:h-80">
+                <div class="h-project overflow-hidden rounded-xl bg-dark-100 border border-paragraph border-opacity-0 bg-opacity-10 dark:border-none dark:bg-white relative md:h-80">
                   <img :src="`/projects/${project.image}`" loading="lazy" :alt="project.name" class="w-full h-full object-cover rounded-xl object-top" />
                 </div>
                 <div class="mt-7 px-2">
                   <ul class="flex items-center flex-wrap gap-x-2 gap-y-2.5 mb-4">
-                    <li v-for="(skill, index) in project.skills" class="text-black bg-white py-1 px-3 rounded-lg text-xs tracking-wide" :key="index">{{ skill }}</li>
+                    <li v-for="(skill, index) in project.skills" class="dark:text-black dark:bg-white text-white bg-dark-100 bg-opacity-90 dark:bg-opacity-100 py-1 px-3 rounded-lg text-xs tracking-wide" :key="index">{{ skill }}</li>
                   </ul>
                   <div class="flex items-center justify-between">
-                    <h4 class="leading-none text-lg text-white font-medium tracking-wider transition-colors group-hover:text-primary">{{ project.name }}</h4>
-                    <span class="w-6 h-6 flex items-center justify-center text-white transition-colors group-hover:text-primary">
-                      <ArrowRightIcon class="w-full stroke-2 stroke-white transform -rotate-45 transition-colors group-hover:stroke-primary" />
+                    <h4 class="leading-none text-lg text-black dark:text-white font-medium tracking-wider transition-colors group-hover:text-primary">{{ project.name }}</h4>
+                    <span class="w-6 h-6 flex items-center justify-center text-black dark:text-white transition-colors group-hover:text-primary">
+                      <ArrowRightIcon class="w-full stroke-2 stroke-black dark:stroke-white transform -rotate-45 transition-colors group-hover:stroke-primary" />
                     </span>
                   </div>
                 </div>
@@ -711,7 +721,7 @@
       <section id="testimonials" class="pt-8 pb-16 md:pt-4 md:pb-8">
         <div class="container">
           <div class="mb-8 md:mb-6">
-            <div class="border-b border-white border-opacity-10 pb-5 md:pb-0 md:border-0">
+            <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
               <h3 class="text-2xl uppercase tracking-widest md:text-xl">Testimonials</h3>
             </div>
           </div>
@@ -732,18 +742,18 @@
             }"
           >
             <swiper-slide v-for="(testimonial, key) in testimonials" :key="key">
-              <div class="relative border border-white border-opacity-10 rounded-xl p-7 estimonials-shadow overflow-hidden md:p-5">
+              <div class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl p-7 estimonials-shadow overflow-hidden md:p-5">
                 <div class="flex items-center gap-7 md:gap-5">
                   <div class="w-24 h-24 bg-primary rounded-lg overflow-hidden relative">
                     <img :src="`/testimonials/${testimonial.author.image}`" loading="lazy" :alt="testimonial.author.name" class="w-full h-full object-cover object-center absolute"/>
                   </div>
                   <div class="flex-1">
                     <h4 class="text-primary text-2xl md:text-xl mb-2.5 leading-none">{{ testimonial.author.name }}</h4>
-                    <span class="text-base text-dark-75">{{ testimonial.author.title }}</span>
+                    <span class="text-base text-paragraph dark:text-dark-75">{{ testimonial.author.title }}</span>
                   </div>
                 </div>
                 <div class="mt-7 mb-4 md:mt-5 md:mb-3">
-                  <p class="text-lg text-dark-75 font-extralight md:text-base">{{ testimonial.quote }}</p>
+                  <p class="text-lg text-paragraph dark:text-dark-75 font-extralight md:text-base">{{ testimonial.quote }}</p>
                 </div>
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2.5">
@@ -752,10 +762,10 @@
                         <StarIcon class="w-full h-full" />
                       </span>
                     </div>
-                    <span class="text-xs text-dark-75 leading-none pt-1">{{ testimonial.reviews }} reviews</span>
+                    <span class="text-xs text-paragraph dark:text-dark-75 leading-none pt-1">{{ testimonial.reviews }} reviews</span>
                   </div>
                   <div class="w-10 h-10">
-                    <img src="/quote.webp" :alt="testimonial.author.name" class="w-full h-full"/>
+                    <img src="/quote.webp" :alt="testimonial.author.name" class="w-full h-full brightness-50 dark:brightness-100"/>
                   </div>
                 </div>
               </div>
@@ -767,9 +777,9 @@
         <div class="container">
           <div class="flex items-start justify-between gap-10 md:flex-col md:gap-8">
             <div class="w-1/2 md:w-full">
-              <span class="uppercase text-xs leading-none text-black bg-white rounded-lg tracking-wide py-3 px-4 inline-block">Get In Touch</span>
+              <span class="uppercase text-xs leading-none text-white bg-dark-100 bg-opacity-90 dark:bg-opacity-100 dark:text-black dark:bg-white rounded-lg tracking-wide py-3 px-4 inline-block">Get In Touch</span>
               <h2 class="text-5xl mt-4 mb-4 leading-tight md:text-4xl md:leading-tight">Let's collaborate to create outstanding web experiences.</h2>
-              <p class="text-dark-75 font-extralight text-base leading-normal mb-10 md:mb-6">If you would like to work with us or just want to get in touch, we'd love <br /> to hear from you!</p>
+              <p class="text-paragraph dark:text-dark-75 font-extralight text-base leading-normal mb-10 md:mb-6">If you would like to work with us or just want to get in touch, we'd love <br /> to hear from you!</p>
               <a href="//api.whatsapp.com/send?phone=212627329145" target="_blank" class="text-primary text-3xl font-medium underline md:text-2xl">+212 627329145</a>
             </div>
             <div class="flex-1 md:w-full">
@@ -779,20 +789,20 @@
               <form @submit.prevent="sendMessage" class="grid gap-7 md:gap-5">
                 <div class="flex items-center gap-7 md:flex-col md:gap-5">
                   <div class="flex-1 md:w-full">
-                    <input v-model="form.name" type="text" class="border border-white border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" placeholder="Name" required/>
+                    <input v-model="form.name" type="text" class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" placeholder="Name" required/>
                   </div>
                   <div class="flex-1 md:w-full">
-                    <input v-model="form.from_name" type="email" class="border border-white border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" placeholder="Email" required/>
+                    <input v-model="form.from_name" type="email" class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" placeholder="Email" required/>
                   </div>
                 </div>
                 <div class="flex-1">
-                  <input v-model="form.subject" type="text" class="border border-white border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" placeholder="Subject" />
+                  <input v-model="form.subject" type="text" class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" placeholder="Subject" />
                 </div>
                 <div class="flex-1">
-                  <textarea v-model="form.message" class="border border-white border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" rows="8" placeholder="Message" required />
+                  <textarea v-model="form.message" class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" rows="8" placeholder="Message" required />
                 </div>
                 <div class="flex-1">
-                  <button type="submit" class="relative overflow-hidden border border-white border-opacity-10 uppercase text-white tracking-widest bg-transparent px-4 py-5 leading-none flex items-center justify-center rounded-lg w-full group transition-colors duration-500 hover:text-black h-14  outline-none" :class="{ 'sending cursor-not-allowed': sending }">
+                  <button type="submit" class="relative overflow-hidden border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 uppercase text-black dark:text-white tracking-widest bg-transparent px-4 py-5 leading-none flex items-center justify-center rounded-lg w-full group transition-colors duration-500 dark:hover:text-black hover:text-black h-14  outline-none" :class="{ 'sending cursor-not-allowed': sending }">
                     Send a message
                     <span v-if="!sending" class="absolute inset-0 w-1.5 bg-primary transition-all duration-500 group-hover:w-full -z-10"></span>
                   </button>
@@ -805,9 +815,9 @@
         </div>
       </section>
     </main>
-    <footer class="border-t border-white border-opacity-10 py-7 md:py-5">
+    <footer class="border-t border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 py-7 md:py-5">
       <div class="container">
-        <span class="leading-none flex items-center justify-center text-center gap-1 text-dark-75">
+        <span class="leading-none flex items-center justify-center text-center gap-1 text-paragraph dark:text-dark-75">
           <CopyrightIcon class="w-3.5 h-3.5 md:w-3 md:h-3" />
           <span class="font-extralight text-sm md:text-xs md:text-center">{{ new Date().getFullYear() }} Othmane Gourirran is Powered by <a href="https://www.upwork.com/freelancers/~01aebf796030857cd1" target="_blank" class="text-primary underline hover:brightness-105">Othmane</a></span>
         </span>
