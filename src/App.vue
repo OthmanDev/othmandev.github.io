@@ -589,7 +589,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/in/othman-gourirran-2932a5127" aria-label="Othmane Gourirran Linkedin" target="_blank" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
+                      <a href="https://www.linkedin.com/in/othmane-gourirran-2932a5127" aria-label="Othmane Gourirran Linkedin" target="_blank" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
                         <LinkedinIcon class="w-3.5 h-3.5" />
                       </a>
                     </li>
