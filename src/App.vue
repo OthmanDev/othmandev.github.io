@@ -289,14 +289,17 @@
       }
     },
     mounted() {
+      document.querySelector('body').style.overflow = 'hidden'
       if (document.readyState === 'complete') {
         setTimeout(() => {
           this.loading = false
+          document.querySelector('body').style.overflow = 'auto'
         }, 500)
       } else {
         window.addEventListener('load', () => {
           setTimeout(() => {
             this.loading = false
+            document.querySelector('body').style.overflow = 'auto'
           }, 500)
         })
       }
@@ -610,7 +613,7 @@
                 <div class="flex items-center gap-20 md:grid md:grid-cols-2 md:gap-6">
                   <div class="flex items-center gap-5 md:gap-3">
                     <h2 class="text-7xl md:text-5xl">7</h2>
-                    <p class="text-base font-extralight text-paragraph dark:text-dark-75">Years <br /> of Experance</p>
+                    <p class="text-base font-extralight text-paragraph dark:text-dark-75">Years <br /> of Experience</p>
                   </div>
                   <div class="flex items-center gap-5 md:gap-3">
                     <h2 class="text-7xl md:text-5xl">31</h2>
