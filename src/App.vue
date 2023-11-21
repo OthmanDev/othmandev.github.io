@@ -249,7 +249,7 @@
               title: 'CEO & Founder, YouCan Inc.',
               image: 'elghissani-mohamed.webp'
             },
-            quote: "Crafting captivating user experiences through code is not just a job for Othmane, it's a passion. With an expert command over front-end technologies, Othmane brings life to designs and transforms ideas into interactive digital realities. Creating seamless journeys for users. As a Front-end Developer, Othmane illuminates the path where creativity and technology converge.",
+            quote: "Crafting captivating user experiences through code is not just a job for Othmane, it's a passion. With an expert command over front-end technologies, Othmane brings life to designs and transforms ideas into interactive digital realities. Creating seamless journeys for users. As a Front-End Engineer, Othmane illuminates the path where creativity and technology converge.",
             reviews: 5
           },
           {
@@ -267,7 +267,7 @@
               title: 'CEO & Founder, Tekency.',
               image: 'anas-ezzouine.webp'
             },
-            quote: "We've had the privilege of working closely with Othmane, and his impact on our projects has been remarkable. his coding prowess, combined with a keen eye for design, consistently delivers websites that not only look stunning but also function seamlessly. Othmane is not just a developer but a problem-solving artist, able to find elegant solutions to complex challenges.",
+            quote: "We've had the privilege of working closely with Othmane, and his impact on our projects has been remarkable. his coding prowess, combined with a keen eye for design, consistently delivers websites that not only look stunning but also function seamlessly. Othmane is not just a engineer but a problem-solving artist, able to find elegant solutions to complex challenges.",
             reviews: 5
           },
         ],
@@ -635,7 +635,7 @@
                   <div class="border-b border-paragraph dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0 dark:border-white">
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">About</h3>
                   </div>
-                  <p class="text-lg font-extralight leading-8 md:text-base text-paragraph dark:text-dark-75">A highly skilled and experienced Front-end Developer with a passion for crafting elegant and user-friendly web interfaces. With 7 years of hands-on experience in front-end development, I have honed my skills in HTML, CSS, and JavaScript to create seamless and responsive web applications.</p>
+                  <p class="text-lg font-extralight leading-8 md:text-base text-paragraph dark:text-dark-75">As a seasoned Front-End Engineer with a deep commitment to crafting sophisticated and user-friendly web interfaces, I bring seven years of hands-on experience in front-end development. Throughout my career, I have refined my expertise in HTML, CSS, and JavaScript, enabling me to design seamless and responsive web applications. Additionally, I am proficient in popular front-end frameworks such as React.js and Vue.js, leveraging their capabilities to enhance the interactivity and performance of web-based projects.</p>
                 </div>
                 <div class="grid gap-8 md:gap-6">
                   <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
