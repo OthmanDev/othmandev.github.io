@@ -57,25 +57,25 @@
           {
             period: '04/21 - Present',
             company: 'Protect',
-            role: 'Front End Developer',
+            role: 'Front-End Engineer',
             link: 'https://protect.inc'
           },
           {
             period: '04/21 - Present',
             company: 'Le ventures',
-            role: 'Front End Developer',
+            role: 'Front-End Developer',
             link: 'https://leventures.com'
           },
           {
             period: '08/18 - 04/21',
             company: 'YouCan',
-            role: 'Front End Developer',
+            role: 'Front-End Developer',
             link: 'https://youcan.shop/en'
           },
           {
             period: '03/17 - 08/18',
             company: 'Webdevia',
-            role: 'Front End Developer',
+            role: 'Front-End Developer',
             link: 'https://themeforest.net/user/mymoun/portfolio'
           }
         ],
@@ -289,6 +289,7 @@
       }
     },
     mounted() {
+      this.checkIfUserClickBKey()
       document.querySelector('body').style.overflow = 'hidden'
       if (document.readyState === 'complete') {
         setTimeout(() => {
@@ -356,6 +357,13 @@
           behavior: 'smooth'
         })
         this.isMenuCollapsed = false
+      },
+      checkIfUserClickBKey() {
+        document.addEventListener('keypress', (e) => {
+          if (e.key === 'b' || e.key === 'B') {
+            document.getElementById('book-a-call').click()
+          }
+        })
       }
     }
   }
@@ -562,7 +570,7 @@
               </a>
             </li>
           </ul>
-          <a @click.prevent="scrollToSection('#contact')" href="#contact" class="text-sm text-black bg-primary px-6 py-4 leading-none flex items-center rounded-lg tracking-wide hover:brightness-105 md:hidden">Hire Me!</a>
+          <a id="book-a-call" href="https://koalendar.com/e/meet-with-othmane" target="_blank" class="text-sm text-black bg-primary px-6 py-3 leading-none flex items-center rounded-lg tracking-wide hover:brightness-105 md:hidden">Press <b class="mx-2 py-1 px-2 bg-white/50 rounded-md text-center font-extrabold">B</b> to book a call</a>
         </div>
       </div>
     </header>
@@ -609,7 +617,7 @@
             </div>
             <div class="flex-1">
               <div class="grid gap-16 md:gap-8">
-                <h1 class="text-6xl leading-normal md:text-4xl md:leading-normal sm:text-center">Hello, I’m <span class="text-primary">Othmane Gourirran</span>. An expert <span class="bord">Front-end Developer<i></i></span> Based in Morocco.</h1>
+                <h1 class="text-6xl leading-normal md:text-4xl md:leading-normal sm:text-center">Hello, I’m <span class="text-primary">Othmane Gourirran</span>. An expert <span class="bord">Front-End Engineer<i></i></span> Based in Morocco.</h1>
                 <div class="flex items-center gap-20 md:grid md:grid-cols-2 md:gap-6">
                   <div class="flex items-center gap-5 md:gap-3">
                     <h2 class="text-7xl md:text-5xl">7</h2>
