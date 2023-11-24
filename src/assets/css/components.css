@@ -79,7 +79,7 @@
   .blur-image:after {
     content: "";
     filter: blur(1000px) brightness(0.5);
-    @apply absolute w-40 h-40 rounded-full pointer-events-none bg-primary;
+    @apply absolute w-40 h-40 rounded-full pointer-events-none bg-primary hidden;
   }
   .blur-image:before {
     @apply top-0 right-0;

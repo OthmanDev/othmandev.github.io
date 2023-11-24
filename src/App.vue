@@ -386,9 +386,9 @@
               <MenuIcon class="w-5 h-5" />
             </div>
           </div>
-          <ul class="flex items-center justify-center gap-10 flex-1 md:hidden lg:gap-5">
+          <ul class="flex items-center justify-center gap-10 flex-1 md:hidden lgx:gap-5">
             <li>
-              <a href="/" class="text-sm uppercase tracking-widest">
+              <a href="/" class="text-sm uppercase tracking-widest lgx:text-xs">
                 <span class="rolling-text">
                   <div>
                     <span class="letter">H</span>
@@ -406,7 +406,7 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#about')" href="#about" class="text-sm uppercase tracking-widest">
+              <a @click.prevent="scrollToSection('#about')" href="#about" class="text-sm uppercase tracking-widest lgx:text-xs">
                 <span class="rolling-text">
                   <div>
                     <span class="letter">A</span>
@@ -426,7 +426,7 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#services')" href="#services" class="text-sm uppercase tracking-widest">
+              <a @click.prevent="scrollToSection('#services')" href="#services" class="text-sm uppercase tracking-widest lgx:text-xs">
                 <span class="rolling-text">
                   <div>
                     <span class="letter">S</span>
@@ -452,7 +452,7 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#portfolio')" href="#portfolio" class="text-sm uppercase tracking-widest">
+              <a @click.prevent="scrollToSection('#portfolio')" href="#portfolio" class="text-sm uppercase tracking-widest lgx:text-xs">
                 <span class="rolling-text">
                   <div>
                     <span class="letter">P</span>
@@ -480,7 +480,7 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#testimonials')" href="#testimonials" class="text-sm uppercase tracking-widest">
+              <a @click.prevent="scrollToSection('#testimonials')" href="#testimonials" class="text-sm uppercase tracking-widest lgx:text-xs">
                 <span class="rolling-text">
                   <div>
                     <span class="letter">T</span>
@@ -514,7 +514,7 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#contact')" href="#contact" class="text-sm uppercase tracking-widest">
+              <a @click.prevent="scrollToSection('#contact')" href="#contact" class="text-sm uppercase tracking-widest lgx:text-xs">
                 <span class="rolling-text">
                   <div>
                     <span class="letter">C</span>
@@ -570,14 +570,14 @@
               </a>
             </li>
           </ul>
-          <a id="book-a-call" href="https://koalendar.com/e/meet-with-othmane" target="_blank" class="text-sm text-black bg-primary px-6 py-3 leading-none flex items-center rounded-lg tracking-wide hover:brightness-105 md:hidden">Press <b class="mx-2 py-1 px-2 bg-white/50 rounded-md text-center font-extrabold">B</b> to book a call</a>
+          <a id="book-a-call" href="https://koalendar.com/e/meet-with-othmane" target="_blank" class="text-sm text-black bg-primary px-6 py-3 lgx:px-4 leading-none flex items-center rounded-lg tracking-wide hover:brightness-105 md:hidden">Press <b class="mx-2 py-1 px-2 bg-white/50 rounded-md text-center font-extrabold">B</b> to book a call</a>
         </div>
       </div>
     </header>
     <main>
       <section class="py-16 lg:py-8">
         <div class="container">
-          <div class="flex items-start justify-between gap-24 md:flex-col md:gap-6">
+          <div class="flex items-start justify-between gap-24 md:flex-col lgx:gap-10">
             <div class="w-author sticky top-20 md:top-0 md:relative md:w-full">
               <div class="grid gap-6">
                 <div class="bg-primary rounded-xl overflow-hidden relative blur-image">
@@ -617,7 +617,7 @@
             </div>
             <div class="flex-1">
               <div class="grid gap-16 md:gap-8">
-                <h1 class="text-6xl leading-normal md:text-4xl md:leading-normal sm:text-center">Hello, I’m <span class="text-primary">Othmane Gourirran</span>. An expert <span class="bord">Front-End Engineer<i></i></span> Based in Morocco.</h1>
+                <h1 class="text-6xl leading-normal md:text-4xl md:leading-normal md:text-center">Hello, I’m <span class="text-primary">Othmane Gourirran</span>. An expert <span class="bord">Front-End Engineer<i></i></span> Based in Morocco.</h1>
                 <div class="flex items-center gap-20 md:grid md:grid-cols-2 md:gap-6">
                   <div class="flex items-center gap-5 md:gap-3">
                     <h2 class="text-7xl md:text-5xl">7</h2>

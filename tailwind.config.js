@@ -44,6 +44,9 @@ module.exports = {
         xl: {
           max: '1920px',
         },
+        lgx: {
+          max: '1350px'
+        },
         lg: {
           max: '1023px',
         },
