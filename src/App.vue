@@ -1,372 +1,400 @@
 <script>
-  import emailjs from 'emailjs-com'
-  import { register } from 'swiper/element/bundle'
-  register()
-  import Cursor from './components/AppCursor.vue'
-  import Loader from './components/AppLoading.vue'
-  import ScrollToTop from './components/ScrollToTop.vue'
-  import SwitchTheme from './components/SwitchTheme.vue'
-  import FacebookIcon from './components/icons/FacebookIcon.vue'
-  import LinkedinIcon from './components/icons/LinkedincIcon.vue'
-  import GithubIcon from './components/icons/GithubIcon.vue'
-  import EmailIcon from './components/icons/EmailIcon.vue'
-  import ArrowRightIcon from './components/icons/ArrowRightIcon.vue'
-  import BootstrapIcon from './components/icons/skills/BootstrapIcon.vue'
-  import CssIcon from './components/icons/skills/CssIcon.vue'
-  import HtmlIcon from './components/icons/skills/HtmlIcon.vue'
-  import JiraIcon from './components/icons/skills/JiraIcon.vue'
-  import JsIcon from './components/icons/skills/JsIcon.vue'
-  import ReactIcon from './components/icons/skills/ReactIcon.vue'
-  import TailwindcssIcon from './components/icons/skills/TailwindcssIcon.vue'
-  import UxIcon from './components/icons/skills/UxIcon.vue'
-  import VueIcon from './components/icons/skills/VueIcon.vue'
-  import StarIcon from './components/icons/StarIcon.vue'
-  import CopyrightIcon from './components/icons/CopyrightIcon.vue'
-  import MenuIcon from './components/icons/MenuIcon.vue'
-  import LogoIcon from './components/icons/LogoIcon.vue'
+import emailjs from 'emailjs-com'
+import { register } from 'swiper/element/bundle'
+register()
+import Cursor from './components/AppCursor.vue'
+import Loader from './components/AppLoading.vue'
+import ScrollToTop from './components/ScrollToTop.vue'
+import SwitchTheme from './components/SwitchTheme.vue'
+import FacebookIcon from './components/icons/FacebookIcon.vue'
+import LinkedinIcon from './components/icons/LinkedincIcon.vue'
+import GithubIcon from './components/icons/GithubIcon.vue'
+import EmailIcon from './components/icons/EmailIcon.vue'
+import ArrowRightIcon from './components/icons/ArrowRightIcon.vue'
+import BootstrapIcon from './components/icons/skills/BootstrapIcon.vue'
+import CssIcon from './components/icons/skills/CssIcon.vue'
+import HtmlIcon from './components/icons/skills/HtmlIcon.vue'
+import JiraIcon from './components/icons/skills/JiraIcon.vue'
+import JsIcon from './components/icons/skills/JsIcon.vue'
+import ReactIcon from './components/icons/skills/ReactIcon.vue'
+import TailwindcssIcon from './components/icons/skills/TailwindcssIcon.vue'
+import UxIcon from './components/icons/skills/UxIcon.vue'
+import VueIcon from './components/icons/skills/VueIcon.vue'
+import StarIcon from './components/icons/StarIcon.vue'
+import CopyrightIcon from './components/icons/CopyrightIcon.vue'
+import MenuIcon from './components/icons/MenuIcon.vue'
+import LogoIcon from './components/icons/LogoIcon.vue'
 
-  export default {
-    components: {
-      Cursor,
-      Loader,
-      ScrollToTop,
-      SwitchTheme,
-      FacebookIcon,
-      LinkedinIcon,
-      GithubIcon,
-      EmailIcon,
-      ArrowRightIcon,
-      BootstrapIcon,
-      CssIcon,
-      HtmlIcon,
-      JiraIcon,
-      JsIcon,
-      ReactIcon,
-      TailwindcssIcon,
-      UxIcon,
-      VueIcon,
-      StarIcon,
-      CopyrightIcon,
-      MenuIcon,
-      LogoIcon
-    },
-    data() {
-      return {
-        loading: true,
-        experiences: [
-          {
-            period: '04/21 - Present',
-            company: 'Protect',
-            role: 'Front-End Engineer',
-            link: 'https://protect.inc'
-          },
-          {
-            period: '04/21 - Present',
-            company: 'Le ventures',
-            role: 'Front-End Developer',
-            link: 'https://leventures.com'
-          },
-          {
-            period: '08/18 - 04/21',
-            company: 'YouCan',
-            role: 'Front-End Developer',
-            link: 'https://youcan.shop/en'
-          },
-          {
-            period: '03/17 - 08/18',
-            company: 'Webdevia',
-            role: 'Front-End Developer',
-            link: 'https://themeforest.net/user/mymoun/portfolio'
-          }
-        ],
-        skills: [
-          {
-            title: 'React',
-            icon: 'ReactIcon',
-            progress: 80
-          },
-          {
-            title: 'VueJs',
-            icon: 'VueIcon',
-            progress: 95
-          },
-          {
-            title: 'Ux Design',
-            icon: 'UxIcon',
-            progress: 95
-          },
-          {
-            title: 'Javascript',
-            icon: 'JsIcon',
-            progress: 95
-          },
-          {
-            title: 'TailwindCss',
-            icon: 'TailwindcssIcon',
-            progress: 90
-          },
-          {
-            title: 'HTML5',
-            icon: 'HtmlIcon',
-            progress: 100
-          },
-          {
-            title: 'CSS3',
-            icon: 'CssIcon',
-            progress: 100
-          },
-          {
-            title: 'Bootstrap',
-            icon: 'BootstrapIcon',
-            progress: 95
-          },
-          {
-            title: 'Jira',
-            icon: 'JiraIcon',
-            progress: 90
-          }
-        ],
-        services: [
-          {
-            letter: 'W',
-            title: 'Web Development',
-            description: 'Visual elements and interactive features of your website. Translate design mockups and wireframes into actual code using HTML, CSS, and JavaScript.'
-          },
-          {
-            letter: 'R',
-            title: 'Responsive Design',
-            description: 'Ensuring that your website look and function well on different devices and screen sizes. Use techniques like media queries and flexible layouts to achieve responsive design.'
-          },
-          {
-            letter: 'U',
-            title: 'User Experience',
-            description: 'Collaborate with UX designers to create a seamless and intuitive user experience. Implement interactive elements, animations, and transitions to enhance the user journey.'
-          },
-          {
-            letter: 'C',
-            title: 'Cross-Browser Compatibility',
-            description: 'Ensure that your websites work consistently across different web browsers, addressing any compatibility issues that may arise.'
-          },
-          {
-            letter: 'P',
-            title: 'Performance Optimization',
-            description: 'Optimizing the performance of your website to deliver a fast and smooth user experience. Optimize code, images, and assets to improve loading times and overall performance.'
-          },
-          {
-            letter: 'F',
-            title: 'Front-End Frameworks',
-            description: 'Work with frameworks like React, and Vue.js to streamline development, manage state, and build interactive user interfaces.'
-          },
-          {
-            letter: 'I',
-            title: 'Integration With Back End',
-            description: 'Work closely with back-end developers to integrate front-end code with back-end systems, APIs, and databases.'
-          },
-          {
-            letter: 'T',
-            title: 'Testing And Debugging',
-            description: 'Use browser developer tools and testing frameworks to identify and resolve issues.'
-          }
-        ],
-        projects: [
-          {
-            image: 'protect.webp',
-            skills: ['VueJs', 'TailwindCss'],
-            name: 'Protect',
-            link: 'https://protect.inc'
-          },
-          {
-            image: 'hypefury.webp',
-            skills: ['VueJs', 'TailwindCss'],
-            name: 'Hypefury',
-            link: 'https://hypefury.com'
-          },
-          {
-            image: 'youcan.webp',
-            skills: ['React', 'TailwindCss'],
-            name: 'YouCan',
-            link: 'https://youcan.shop/en'
-          },
-          {
-            image: 'apocalypsecoffee.webp',
-            skills: ['Shopify'],
-            name: 'Apocalypse Coffee',
-            link: 'https://apocalypsecoffee.com'
-          },
-          {
-            image: 'littlemass.webp',
-            skills: ['Shopify'],
-            name: 'Little Mass',
-            link: 'https://littlemass.com'
-          },
-          {
-            image: 'gear-aarmy.webp',
-            skills: ['Shopify'],
-            name: 'Aarmy',
-            link: 'https://gear.aarmy.com'
-          },
-          {
-            image: 'chouftv.webp',
-            skills: ['HTML5', 'CSS3', 'Javascript'],
-            name: 'Chouftv',
-            link: 'https://chouftv.ma'
-          },
-          {
-            image: 'medi1.webp',
-            skills: ['VueJs', 'Nuxt'],
-            name: 'Medi1',
-            link: 'https://medi1.com'
-          },
-          {
-            image: 'menara.webp',
-            skills: ['VueJs', 'Nuxt'],
-            name: 'Menara',
-            link: 'https://menara.ma'
-          },
-          {
-            image: 'rajesh.webp',
-            skills: ['HTML5', 'CSS3', 'Javascript'],
-            name: 'Rajesh',
-            link: 'https://rajesh-personal-template.netlify.app'
-          },
-          {
-            image: 'creativo.webp',
-            skills: ['HTML5', 'CSS3', 'Javascript'],
-            name: 'Creativo',
-            link: 'https://creative-themes.netlify.app'
-          },
-          {
-            image: 'fat2fit.webp',
-            skills: ['HTML5', 'CSS3', 'Javascript'],
-            name: 'Fat2Fit',
-            link: 'https://fat2fit-theme.netlify.app'
-          }
-        ],
-        testimonials: [
-          {
-            author: {
-              name: 'Mohamed El Ghaissani',
-              title: 'CEO & Founder, YouCan Inc.',
-              image: 'elghissani-mohamed.webp'
-            },
-            quote: "Crafting captivating user experiences through code is not just a job for Othmane, it's a passion. With an expert command over front-end technologies, Othmane brings life to designs and transforms ideas into interactive digital realities. Creating seamless journeys for users. As a Front-End Engineer, Othmane illuminates the path where creativity and technology converge.",
-            reviews: 5
-          },
-          {
-            author: {
-              name: 'Khoi Le',
-              title: 'CEO & Founder, Protect Inc.',
-              image: 'khoi-le.webp'
-            },
-            quote: "We've had the pleasure of working with Othmane, and he's truly transformed our digital presence. his coding skills bring our designs to life, resulting in beautiful and user-friendly websites. Othmane is reliable, efficient, and pays attention to detail, ensuring our projects are completed to perfection. his creative problem-solving abilities have been invaluable to our team.",
-            reviews: 5
-          },
-          {
-            author: {
-              name: 'Anass Ezzouine',
-              title: 'CEO & Founder, Tekency.',
-              image: 'anas-ezzouine.webp'
-            },
-            quote: "We've had the privilege of working closely with Othmane, and his impact on our projects has been remarkable. his coding prowess, combined with a keen eye for design, consistently delivers websites that not only look stunning but also function seamlessly. Othmane is not just a engineer but a problem-solving artist, able to find elegant solutions to complex challenges.",
-            reviews: 5
-          },
-        ],
-        form: {
-          to_name: 'Othmane Gourirran',
-          name: '',
-          from_name: '',
-          subject: '',
-          message: ''
+export default {
+  components: {
+    Cursor,
+    Loader,
+    ScrollToTop,
+    SwitchTheme,
+    FacebookIcon,
+    LinkedinIcon,
+    GithubIcon,
+    EmailIcon,
+    ArrowRightIcon,
+    BootstrapIcon,
+    CssIcon,
+    HtmlIcon,
+    JiraIcon,
+    JsIcon,
+    ReactIcon,
+    TailwindcssIcon,
+    UxIcon,
+    VueIcon,
+    StarIcon,
+    CopyrightIcon,
+    MenuIcon,
+    LogoIcon
+  },
+  data() {
+    return {
+      loading: true,
+      experiences: [
+        {
+          period: '04/21 - Present',
+          company: 'Protect',
+          role: 'Front-End Engineer',
+          link: 'https://protect.inc'
         },
-        sended: false,
-        sending: false,
-        emailResponse: {
-          status: false,
-          message: '',
-          type: 'success'
+        {
+          period: '04/21 - Present',
+          company: 'Le ventures',
+          role: 'Front-End Developer',
+          link: 'https://leventures.com'
         },
-        isMenuCollapsed: false
-      }
-    },
-    mounted() {
-      this.checkIfUserClickBKey()
-      document.querySelector('body').style.overflow = 'hidden'
-      if (document.readyState === 'complete') {
+        {
+          period: '08/18 - 04/21',
+          company: 'YouCan',
+          role: 'Front-End Developer',
+          link: 'https://youcan.shop/en'
+        },
+        {
+          period: '03/17 - 08/18',
+          company: 'Webdevia',
+          role: 'Front-End Developer',
+          link: 'https://themeforest.net/user/mymoun/portfolio'
+        }
+      ],
+      skills: [
+        {
+          title: 'React',
+          icon: 'ReactIcon',
+          progress: 80
+        },
+        {
+          title: 'VueJs',
+          icon: 'VueIcon',
+          progress: 95
+        },
+        {
+          title: 'Ux Design',
+          icon: 'UxIcon',
+          progress: 95
+        },
+        {
+          title: 'Javascript',
+          icon: 'JsIcon',
+          progress: 95
+        },
+        {
+          title: 'TailwindCss',
+          icon: 'TailwindcssIcon',
+          progress: 90
+        },
+        {
+          title: 'HTML5',
+          icon: 'HtmlIcon',
+          progress: 100
+        },
+        {
+          title: 'CSS3',
+          icon: 'CssIcon',
+          progress: 100
+        },
+        {
+          title: 'Bootstrap',
+          icon: 'BootstrapIcon',
+          progress: 95
+        },
+        {
+          title: 'Jira',
+          icon: 'JiraIcon',
+          progress: 90
+        }
+      ],
+      services: [
+        {
+          letter: 'W',
+          title: 'Web Development',
+          description:
+            'Visual elements and interactive features of your website. Translate design mockups and wireframes into actual code using HTML, CSS, and JavaScript.'
+        },
+        {
+          letter: 'R',
+          title: 'Responsive Design',
+          description:
+            'Ensuring that your website look and function well on different devices and screen sizes. Use techniques like media queries and flexible layouts to achieve responsive design.'
+        },
+        {
+          letter: 'U',
+          title: 'User Experience',
+          description:
+            'Collaborate with UX designers to create a seamless and intuitive user experience. Implement interactive elements, animations, and transitions to enhance the user journey.'
+        },
+        {
+          letter: 'C',
+          title: 'Cross-Browser Compatibility',
+          description:
+            'Ensure that your websites work consistently across different web browsers, addressing any compatibility issues that may arise.'
+        },
+        {
+          letter: 'P',
+          title: 'Performance Optimization',
+          description:
+            'Optimizing the performance of your website to deliver a fast and smooth user experience. Optimize code, images, and assets to improve loading times and overall performance.'
+        },
+        {
+          letter: 'F',
+          title: 'Front-End Frameworks',
+          description:
+            'Work with frameworks like React, and Vue.js to streamline development, manage state, and build interactive user interfaces.'
+        },
+        {
+          letter: 'I',
+          title: 'Integration With Back End',
+          description:
+            'Work closely with back-end developers to integrate front-end code with back-end systems, APIs, and databases.'
+        },
+        {
+          letter: 'T',
+          title: 'Testing And Debugging',
+          description:
+            'Use browser developer tools and testing frameworks to identify and resolve issues.'
+        }
+      ],
+      projects: [
+        {
+          image: 'seo.webp',
+          skills: ['VueJs', 'Pinia', 'TailwindCss'],
+          name: 'SEO-Copilot',
+          link: 'https://seocopilotai.com'
+        },
+        {
+          image: 'protect.webp',
+          skills: ['VueJs', 'TailwindCss'],
+          name: 'Protect',
+          link: 'https://protect.inc'
+        },
+        {
+          image: 'hypefury.webp',
+          skills: ['VueJs', 'TailwindCss'],
+          name: 'Hypefury',
+          link: 'https://hypefury.com'
+        },
+        {
+          image: 'youcan.webp',
+          skills: ['React', 'TailwindCss'],
+          name: 'YouCan',
+          link: 'https://youcan.shop/en'
+        },
+        {
+          image: 'apocalypsecoffee.webp',
+          skills: ['Shopify'],
+          name: 'Apocalypse Coffee',
+          link: 'https://apocalypsecoffee.com'
+        },
+        {
+          image: 'littlemass.webp',
+          skills: ['Shopify'],
+          name: 'Little Mass',
+          link: 'https://littlemass.com'
+        },
+        {
+          image: 'gear-aarmy.webp',
+          skills: ['Shopify'],
+          name: 'Aarmy',
+          link: 'https://gear.aarmy.com'
+        },
+        {
+          image: 'chouftv.webp',
+          skills: ['HTML5', 'CSS3', 'Javascript'],
+          name: 'Chouftv',
+          link: 'https://chouftv.ma'
+        },
+        {
+          image: 'medi1.webp',
+          skills: ['VueJs', 'Nuxt'],
+          name: 'Medi1',
+          link: 'https://medi1.com'
+        },
+        {
+          image: 'menara.webp',
+          skills: ['VueJs', 'Nuxt'],
+          name: 'Menara',
+          link: 'https://menara.ma'
+        },
+        {
+          image: 'rajesh.webp',
+          skills: ['HTML5', 'CSS3', 'Javascript'],
+          name: 'Rajesh',
+          link: 'https://rajesh-personal-template.netlify.app'
+        },
+        {
+          image: 'creativo.webp',
+          skills: ['HTML5', 'CSS3', 'Javascript'],
+          name: 'Creativo',
+          link: 'https://creative-themes.netlify.app'
+        },
+        {
+          image: 'fat2fit.webp',
+          skills: ['HTML5', 'CSS3', 'Javascript'],
+          name: 'Fat2Fit',
+          link: 'https://fat2fit-theme.netlify.app'
+        }
+      ],
+      testimonials: [
+        {
+          author: {
+            name: 'Josh Bachynski',
+            title: 'CEO & Founder, SEO-CopilotAI',
+            image: 'josh.webp'
+          },
+          quote:
+            'Working with Othmane was better than expected and we had really high expectations. He is an incredibly talented developer but what really makes him stand out is his work ethic and steady approach. Time after time, and without us asking, he added enhancements and improvements that resulted in a better end product for us and our clients.',
+          reviews: 5
+        },
+        {
+          author: {
+            name: 'Mohamed El Ghaissani',
+            title: 'CEO & Founder, YouCan Inc.',
+            image: 'elghissani-mohamed.webp'
+          },
+          quote:
+            "Crafting captivating user experiences through code is not just a job for Othmane, it's a passion. With an expert command over front-end technologies, Othmane brings life to designs and transforms ideas into interactive digital realities. Creating seamless journeys for users. As a Front-End Engineer, Othmane illuminates the path where creativity and technology converge.",
+          reviews: 5
+        },
+        {
+          author: {
+            name: 'Khoi Le',
+            title: 'CEO & Founder, Protect Inc.',
+            image: 'khoi-le.webp'
+          },
+          quote:
+            "We've had the pleasure of working with Othmane, and he's truly transformed our digital presence. his coding skills bring our designs to life, resulting in beautiful and user-friendly websites. Othmane is reliable, efficient, and pays attention to detail, ensuring our projects are completed to perfection. his creative problem-solving abilities have been invaluable to our team.",
+          reviews: 5
+        },
+        {
+          author: {
+            name: 'Anass Ezzouine',
+            title: 'CEO & Founder, Tekency.',
+            image: 'anas-ezzouine.webp'
+          },
+          quote:
+            "We've had the privilege of working closely with Othmane, and his impact on our projects has been remarkable. his coding prowess, combined with a keen eye for design, consistently delivers websites that not only look stunning but also function seamlessly. Othmane is not just a engineer but a problem-solving artist, able to find elegant solutions to complex challenges.",
+          reviews: 5
+        }
+      ],
+      form: {
+        to_name: 'Othmane Gourirran',
+        name: '',
+        from_name: '',
+        subject: '',
+        message: ''
+      },
+      sended: false,
+      sending: false,
+      emailResponse: {
+        status: false,
+        message: '',
+        type: 'success'
+      },
+      isMenuCollapsed: false
+    }
+  },
+  mounted() {
+    this.checkIfUserClickBKey()
+    document.querySelector('body').style.overflow = 'hidden'
+    if (document.readyState === 'complete') {
+      setTimeout(() => {
+        this.loading = false
+        document.querySelector('body').style.overflow = 'auto'
+      }, 500)
+    } else {
+      window.addEventListener('load', () => {
         setTimeout(() => {
           this.loading = false
           document.querySelector('body').style.overflow = 'auto'
         }, 500)
-      } else {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            this.loading = false
-            document.querySelector('body').style.overflow = 'auto'
-          }, 500)
-        })
-      }
-      if ((window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.querySelector('html').classList.add('dark')
-      } else {
-        document.querySelector('html').classList.remove('dark')
+      })
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.querySelector('html').classList.add('dark')
+    } else {
+      document.querySelector('html').classList.remove('dark')
+    }
+  },
+  methods: {
+    async sendMessage() {
+      this.sending = true
+      try {
+        this.form.message =
+          this.form.name +
+          ' Sent you a message: ' +
+          this.form.message +
+          ' SUBJECT: ' +
+          this.form.subject
+        await emailjs.send('service_3oky19f', 'template_7rbi9c2', this.form, 'eiHe9w7qd8lmbk6eQ')
+        this.sended = true
+        this.emailResponse = {
+          status: true,
+          message: "Thank you for reaching out! I'll be in touch with you shortly.",
+          type: 'success'
+        }
+        this.form = {
+          to_name: 'Othmane Gourirran',
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        }
+        this.sending = false
+        setTimeout(() => {
+          this.emailResponse.status = false
+        }, 5000)
+      } catch (error) {
+        this.emailResponse = {
+          status: true,
+          message:
+            'Unfortunately, there was an issue while attempting to send your message. Please try again. If the problem persists, feel free to contact me through othmandeveloppeur@gmail.com.',
+          type: 'error'
+        }
+        this.sending = false
+        setTimeout(() => {
+          this.emailResponse.status = false
+        }, 5000)
       }
     },
-    methods: {
-      async sendMessage () {
-        this.sending = true
-        try {
-          this.form.message = this.form.name + ' Sent you a message: ' + this.form.message + ' SUBJECT: ' + this.form.subject
-          await emailjs.send(
-            'service_3oky19f',
-            'template_7rbi9c2',
-            this.form,
-            'eiHe9w7qd8lmbk6eQ'
-          )
-          this.sended = true
-          this.emailResponse = {
-            status: true,
-            message: "Thank you for reaching out! I'll be in touch with you shortly.",
-            type: 'success'
-          }
-          this.form = {
-            to_name: 'Othmane Gourirran',
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-          }
-          this.sending = false
-          setTimeout(() => {
-            this.emailResponse.status  = false
-          }, 5000)
-        } catch (error) {
-          this.emailResponse = {
-            status: true,
-            message: "Unfortunately, there was an issue while attempting to send your message. Please try again. If the problem persists, feel free to contact me through othmandeveloppeur@gmail.com.",
-            type: 'error'
-          }
-          this.sending = false
-          setTimeout(() => {
-            this.emailResponse.status  = false
-          }, 5000)
+    scrollToSection(sectionId) {
+      const targetSection = document.querySelector(sectionId)
+      window.scrollTo({
+        top: sectionId !== '#home' ? targetSection.offsetTop - 20 : targetSection.offsetTop,
+        behavior: 'smooth'
+      })
+      this.isMenuCollapsed = false
+    },
+    checkIfUserClickBKey() {
+      document.addEventListener('keypress', (e) => {
+        if (e.key === 'b' || e.key === 'B') {
+          document.getElementById('book-a-call').click()
         }
-      },
-      scrollToSection(sectionId) {
-        const targetSection = document.querySelector(sectionId)
-        window.scrollTo({
-          top: sectionId !== '#home' ? targetSection.offsetTop - 20 : targetSection.offsetTop,
-          behavior: 'smooth'
-        })
-        this.isMenuCollapsed = false
-      },
-      checkIfUserClickBKey() {
-        document.addEventListener('keypress', (e) => {
-          if (e.key === 'b' || e.key === 'B') {
-            document.getElementById('book-a-call').click()
-          }
-        })
-      }
+      })
     }
   }
+}
 </script>
 
 <template>
@@ -375,14 +403,22 @@
     <Loader :class="{ 'slide-out': !loading }" />
     <ScrollToTop />
     <SwitchTheme />
-    <header class="py-2.5 md:border-b md:border-dark-75 dark:md:border-dark-75 md:border-opacity-50 dark:md:border-opacity-10">
+    <header
+      class="py-2.5 md:border-b md:border-dark-75 dark:md:border-dark-75 md:border-opacity-50 dark:md:border-opacity-10"
+    >
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="flex items-center justify-between md:w-full">
-            <a href="/" class="flex items-center w-40 -ml-2 outline-none md:w-36 text-black dark:text-white">
+            <a
+              href="/"
+              class="flex items-center w-40 -ml-2 outline-none md:w-36 text-black dark:text-white"
+            >
               <LogoIcon class="w-full" />
             </a>
-            <div @click="isMenuCollapsed = !isMenuCollapsed" class="dark:text-white text-black hidden md:block">
+            <div
+              @click="isMenuCollapsed = !isMenuCollapsed"
+              class="dark:text-white text-black hidden md:block"
+            >
               <MenuIcon class="w-5 h-5" />
             </div>
           </div>
@@ -406,7 +442,11 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#about')" href="#about" class="text-sm uppercase tracking-widest lgx:text-xs">
+              <a
+                @click.prevent="scrollToSection('#about')"
+                href="#about"
+                class="text-sm uppercase tracking-widest lgx:text-xs"
+              >
                 <span class="rolling-text">
                   <div>
                     <span class="letter">A</span>
@@ -426,7 +466,11 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#services')" href="#services" class="text-sm uppercase tracking-widest lgx:text-xs">
+              <a
+                @click.prevent="scrollToSection('#services')"
+                href="#services"
+                class="text-sm uppercase tracking-widest lgx:text-xs"
+              >
                 <span class="rolling-text">
                   <div>
                     <span class="letter">S</span>
@@ -452,7 +496,11 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#portfolio')" href="#portfolio" class="text-sm uppercase tracking-widest lgx:text-xs">
+              <a
+                @click.prevent="scrollToSection('#portfolio')"
+                href="#portfolio"
+                class="text-sm uppercase tracking-widest lgx:text-xs"
+              >
                 <span class="rolling-text">
                   <div>
                     <span class="letter">P</span>
@@ -480,7 +528,11 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#testimonials')" href="#testimonials" class="text-sm uppercase tracking-widest lgx:text-xs">
+              <a
+                @click.prevent="scrollToSection('#testimonials')"
+                href="#testimonials"
+                class="text-sm uppercase tracking-widest lgx:text-xs"
+              >
                 <span class="rolling-text">
                   <div>
                     <span class="letter">T</span>
@@ -514,7 +566,11 @@
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#contact')" href="#contact" class="text-sm uppercase tracking-widest lgx:text-xs">
+              <a
+                @click.prevent="scrollToSection('#contact')"
+                href="#contact"
+                class="text-sm uppercase tracking-widest lgx:text-xs"
+              >
                 <span class="rolling-text">
                   <div>
                     <span class="letter">C</span>
@@ -538,39 +594,70 @@
               </a>
             </li>
           </ul>
-          <ul v-if="isMenuCollapsed" class="hidden md:absolute md:top-full md:grid md:justify-normal md:z-10 md:mt-3 bg-header dark:md:bg-dark-header md:gap-0 md:-mx-4 md:w-header">
+          <ul
+            v-if="isMenuCollapsed"
+            class="hidden md:absolute md:top-full md:grid md:justify-normal md:z-10 md:mt-3 bg-header dark:md:bg-dark-header md:gap-0 md:-mx-4 md:w-header"
+          >
             <li>
               <a href="/" class="text-sm uppercase tracking-widest md:block md:w-full md:p-4">
                 Home
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#about')" href="#about" class="text-sm uppercase tracking-widest md:block md:w-full md:p-4">
+              <a
+                @click.prevent="scrollToSection('#about')"
+                href="#about"
+                class="text-sm uppercase tracking-widest md:block md:w-full md:p-4"
+              >
                 About
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#services')" href="#services" class="text-sm uppercase tracking-widest md:block md:w-full md:p-4">
+              <a
+                @click.prevent="scrollToSection('#services')"
+                href="#services"
+                class="text-sm uppercase tracking-widest md:block md:w-full md:p-4"
+              >
                 Services
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#portfolio')" href="#portfolio" class="text-sm uppercase tracking-widest md:block md:w-full md:p-4">
+              <a
+                @click.prevent="scrollToSection('#portfolio')"
+                href="#portfolio"
+                class="text-sm uppercase tracking-widest md:block md:w-full md:p-4"
+              >
                 Portfolio
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#testimonials')" href="#testimonials" class="text-sm uppercase tracking-widest md:block md:w-full md:p-4">
+              <a
+                @click.prevent="scrollToSection('#testimonials')"
+                href="#testimonials"
+                class="text-sm uppercase tracking-widest md:block md:w-full md:p-4"
+              >
                 Testimonials
               </a>
             </li>
             <li>
-              <a @click.prevent="scrollToSection('#contact')" href="#contact" class="text-sm uppercase tracking-widest md:block md:w-full md:p-4">
+              <a
+                @click.prevent="scrollToSection('#contact')"
+                href="#contact"
+                class="text-sm uppercase tracking-widest md:block md:w-full md:p-4"
+              >
                 Contact
               </a>
             </li>
           </ul>
-          <a id="book-a-call" href="https://koalendar.com/e/meet-with-othmane" target="_blank" class="text-sm text-black bg-primary px-6 py-3 lgx:px-4 leading-none flex items-center rounded-lg tracking-wide hover:brightness-105 md:hidden">Press <b class="mx-2 py-1 px-2 bg-white/50 rounded-md text-center font-extrabold">B</b> to book a call</a>
+          <a
+            id="book-a-call"
+            href="https://koalendar.com/e/meet-with-othmane"
+            target="_blank"
+            class="text-sm text-black bg-primary px-6 py-3 lgx:px-4 leading-none flex items-center rounded-lg tracking-wide hover:brightness-105 md:hidden"
+            >Press
+            <b class="mx-2 py-1 px-2 bg-white/50 rounded-md text-center font-extrabold">B</b> to
+            book a call</a
+          >
         </div>
       </div>
     </header>
@@ -581,33 +668,65 @@
             <div class="w-author sticky top-20 md:top-0 md:relative md:w-full">
               <div class="grid gap-6">
                 <div class="bg-primary rounded-xl overflow-hidden relative blur-image">
-                  <img src="/profile.webp" loading="lazy" alt="Othmane Gourirran" class="w-full h-auto" width="400" height="410" />
+                  <img
+                    src="/profile.webp"
+                    loading="lazy"
+                    alt="Othmane Gourirran"
+                    class="w-full h-auto"
+                    width="400"
+                    height="410"
+                  />
                 </div>
                 <div class="grid gap-5">
                   <div class="text-center grid gap-2">
                     <h5 class="text-2xl">Othmane Gourirran</h5>
                     <p>
-                      <a href="https://www.upwork.com/freelancers/~01aebf796030857cd1" target="_blank" class="text-base font-extralight text-paragraph dark:text-dark-75">@OthmanG</a>
+                      <a
+                        href="https://www.upwork.com/freelancers/~01aebf796030857cd1"
+                        target="_blank"
+                        class="text-base font-extralight text-paragraph dark:text-dark-75"
+                        >@OthmanG</a
+                      >
                     </p>
                   </div>
                   <ul class="flex items-center justify-center gap-4">
                     <li>
-                      <a href="https://facebook.com/othman.gourriran" target="_blank" aria-label="Othmane Gourirran Facebook" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
+                      <a
+                        href="https://facebook.com/othman.gourriran"
+                        target="_blank"
+                        aria-label="Othmane Gourirran Facebook"
+                        class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black"
+                      >
                         <FacebookIcon class="w-3.5 h-3.5" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/in/othmane-gourirran-2932a5127" aria-label="Othmane Gourirran Linkedin" target="_blank" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
+                      <a
+                        href="https://www.linkedin.com/in/othmane-gourirran-2932a5127"
+                        aria-label="Othmane Gourirran Linkedin"
+                        target="_blank"
+                        class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black"
+                      >
                         <LinkedinIcon class="w-3.5 h-3.5" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/OthmanDev" target="_blank" aria-label="Othmane Gourirran Github" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
+                      <a
+                        href="https://github.com/OthmanDev"
+                        target="_blank"
+                        aria-label="Othmane Gourirran Github"
+                        class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black"
+                      >
                         <GithubIcon class="w-3.5 h-3.5" />
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:othmandeveloppeur@gmail.com" target="_blank" aria-label="Othmane Gourirran Email" class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black">
+                      <a
+                        href="mailto:othmandeveloppeur@gmail.com"
+                        target="_blank"
+                        aria-label="Othmane Gourirran Email"
+                        class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black"
+                      >
                         <EmailIcon class="w-3.5 h-3.5" />
                       </a>
                     </li>
@@ -617,64 +736,130 @@
             </div>
             <div class="flex-1">
               <div class="grid gap-16 md:gap-8">
-                <h1 class="text-6xl leading-normal md:text-4xl md:leading-normal md:text-center">Hello, I’m <span class="text-primary">Othmane Gourirran</span>. An expert <span class="bord">Front-End Engineer<i></i></span> Based in Morocco.</h1>
+                <h1 class="text-6xl leading-normal md:text-4xl md:leading-normal md:text-center">
+                  Hello, I’m <span class="text-primary">Othmane Gourirran</span>. A senior
+                  <span class="bord">Front-End Developer<i></i></span> Based in Morocco.
+                </h1>
                 <div class="flex items-center gap-20 md:grid md:grid-cols-2 md:gap-6">
                   <div class="flex items-center gap-5 md:gap-3">
-                    <h2 class="text-7xl md:text-5xl">7</h2>
-                    <p class="text-base font-extralight text-paragraph dark:text-dark-75">Years <br /> of Experience</p>
+                    <h2 class="text-7xl md:text-5xl">8+</h2>
+                    <p class="text-base font-extralight text-paragraph dark:text-dark-75">
+                      Years <br />
+                      of Experience
+                    </p>
                   </div>
                   <div class="flex items-center gap-5 md:gap-3">
-                    <h2 class="text-7xl md:text-5xl">31</h2>
-                    <p class="text-base font-extralight text-paragraph dark:text-dark-75">Clients <br /> Worldwide</p>
+                    <h2 class="text-7xl md:text-5xl">40</h2>
+                    <p class="text-base font-extralight text-paragraph dark:text-dark-75">
+                      Clients <br />
+                      Worldwide
+                    </p>
                   </div>
                   <div class="md:col-span-2">
-                    <a href="othmane.gourirran.pdf" download="othmane.gourirran.pdf" class="text-sm text-black bg-primary px-6 py-4 leading-none flex items-center justify-center rounded-lg tracking-wide hover:brightness-105">Dwonload C.V</a>
+                    <a
+                      href="othmane.gourirran.pdf"
+                      download="othmane.gourirran.pdf"
+                      class="text-sm text-black bg-primary px-6 py-4 leading-none flex items-center justify-center rounded-lg tracking-wide hover:brightness-105"
+                      >Dwonload C.V</a
+                    >
                   </div>
                 </div>
                 <div id="about" class="grid gap-5 md:gap-4">
-                  <div class="border-b border-paragraph dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0 dark:border-white">
+                  <div
+                    class="border-b border-paragraph dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0 dark:border-white"
+                  >
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">About</h3>
                   </div>
-                  <p class="text-lg font-extralight leading-8 md:text-base text-paragraph dark:text-dark-75">As a seasoned Front-End Engineer with a deep commitment to crafting sophisticated and user-friendly web interfaces, I bring seven years of hands-on experience in front-end development. Throughout my career, I have refined my expertise in HTML, CSS, and JavaScript, enabling me to design seamless and responsive web applications. Additionally, I am proficient in popular front-end frameworks such as React.js and Vue.js, leveraging their capabilities to enhance the interactivity and performance of web-based projects.</p>
+                  <p
+                    class="text-lg font-extralight leading-8 md:text-base text-paragraph dark:text-dark-75"
+                  >
+                    🌟 100% Job Success Front-end Developer on Upwork <br />
+                    🌟 Prime Quality work and Effective communication throughout the complete
+                    development process are my core values. <br />
+                    Are you looking for a Vue js Developer, React js developer, Next js developer,
+                    or a Senior Front-end Developer? Then you’re at your required destination.
+                    <br />
+                    🖐 I’m a Senior Front-end Developer (Vue js development) with 8 years of
+                    experience in developing pixel-perfect responsive web applications<br />
+                    🖐 I’m a Senior Front-end Developer (React js development, Next js development)
+                    with 4+ years of experience in developing pixel-perfect responsive web
+                    applications
+                  </p>
                 </div>
                 <div class="grid gap-8 md:gap-6">
-                  <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
-                    <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">Experience Porfessional</h3>
+                  <div
+                    class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
+                  >
+                    <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">
+                      Experience Porfessional
+                    </h3>
                   </div>
                   <div class="grid gap-6 md:gap-5">
-                    <div v-for="(experience, key) in experiences" class="flex items-center justify-between gap-12 md:gap-5 md:pb-5 border-b border-paragraph dark:border-white pb-6 dark:border-opacity-10 border-opacity-10 sm:flex-col sm:border sm:rounded-lg sm:p-4" :key="key">
-                      <div class="rounded-lg py-2 text-center text-xs text-white dark:text-black w-date bg-dark-100 bg-opacity-90 dark:bg-white">
+                    <div
+                      v-for="(experience, key) in experiences"
+                      class="flex items-center justify-between gap-12 md:gap-5 md:pb-5 border-b border-paragraph dark:border-white pb-6 dark:border-opacity-10 border-opacity-10 sm:flex-col sm:border sm:rounded-lg sm:p-4"
+                      :key="key"
+                    >
+                      <div
+                        class="rounded-lg py-2 text-center text-xs text-white dark:text-black w-date bg-dark-100 bg-opacity-90 dark:bg-white"
+                      >
                         {{ experience.period }}
                       </div>
                       <div class="flex-1 sm:text-center">
                         <h3 class="text-xl md:text-lg">
-                          <a :href="experience.link" target="_blank" class="text-primary uppercase tracking-widest hover:brightness-105">{{ experience.company }}</a> - {{ experience.role }}
+                          <a
+                            :href="experience.link"
+                            target="_blank"
+                            class="text-primary uppercase tracking-widest hover:brightness-105"
+                            >{{ experience.company }}</a
+                          >
+                          - {{ experience.role }}
                         </h3>
                       </div>
                       <div class="sm:hidden">
-                        <a :href="experience.link" target="_blank" :aria-label="experience.company" class="w-6 h-6 flex items-center justify-center group md:w-4 md:h-4">
-                          <ArrowRightIcon class="w-full stroke-2 dark:stroke-white stroke-black transition-colors group-hover:stroke-primary" />
+                        <a
+                          :href="experience.link"
+                          target="_blank"
+                          :aria-label="experience.company"
+                          class="w-6 h-6 flex items-center justify-center group md:w-4 md:h-4"
+                        >
+                          <ArrowRightIcon
+                            class="w-full stroke-2 dark:stroke-white stroke-black transition-colors group-hover:stroke-primary"
+                          />
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="grid gap-8 md:gap-6">
-                  <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
+                  <div
+                    class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
+                  >
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">Skills</h3>
                   </div>
                   <div class="grid grid-cols-3 gap-7 md:grid-cols-2 md:gap-5 sm-grid-cols-1">
-                    <div v-for="(skill, key) in skills" class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl px-7 pt-7 md:px-5 md:pt-5" :key="key">
+                    <div
+                      v-for="(skill, key) in skills"
+                      class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl px-7 pt-7 md:px-5 md:pt-5"
+                      :key="key"
+                    >
                       <div class="flex items-center gap-5 mb-7 md:mb-5">
                         <div class="w-10 h-10">
-                          <component :is="skill.icon" class="w-full h-full"/>
+                          <component :is="skill.icon" class="w-full h-full" />
                         </div>
                         <h4 class="text-lg capitalize">{{ skill.title }}</h4>
                       </div>
                       <div class="h-progress relative bg-dark-100 dark:bg-white bg-opacity-10">
-                        <div class="bg-dark-100 dark:bg-white h-full absolute transition-all duration-500" :data-progress="skill.progress" :style="{ 'width': skill.progress + '%' }"></div>
+                        <div
+                          class="bg-dark-100 dark:bg-white h-full absolute transition-all duration-500"
+                          :data-progress="skill.progress"
+                          :style="{ width: skill.progress + '%' }"
+                        ></div>
                       </div>
-                      <span class="absolute top-2.5 right-2.5 text-badge text-white dark:text-black bg-dark-100 dark:bg-white px-2.5 py-1 rounded-full bg-opacity-90">{{ skill.progress }}%</span>
+                      <span
+                        class="absolute top-2.5 right-2.5 text-badge text-white dark:text-black bg-dark-100 dark:bg-white px-2.5 py-1 rounded-full bg-opacity-90"
+                        >{{ skill.progress }}%</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -686,16 +871,26 @@
       <section id="services" class="pt-8 pb-16 md:pt-4 md:pb-8">
         <div class="container">
           <div class="grid gap-8 md:gap-6">
-            <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
+            <div
+              class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
+            >
               <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">Services</h3>
             </div>
             <div class="grid grid-cols-4 gap-7 md:grid-cols-2 md:gap-5 sm-grid-cols-1">
-              <div v-for="(service, key) in services" class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl p-7 md:p-5 transition-all duration-300 hover:bg-dark-100 hover:text-white dark:hover:bg-white dark:hover:text-black hover:border-opacity-100 group scale-100 hover:scale-105 ease-in-out" :key="key">
+              <div
+                v-for="(service, key) in services"
+                class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl p-7 md:p-5 transition-all duration-300 hover:bg-dark-100 hover:text-white dark:hover:bg-white dark:hover:text-black hover:border-opacity-100 group scale-100 hover:scale-105 ease-in-out"
+                :key="key"
+              >
                 <div class="flex flex-col gap-3 mb-2">
                   <h3 class="text-6xl md:text-5xl">{{ service.letter }}</h3>
                   <h4 class="text-lg capitalize">{{ service.title }}</h4>
                 </div>
-                <p class="text-base font-extralight text-paragraph group-hover:text-white dark:text-dark-75 dark:group-hover:text-black">{{ service.description }}</p>
+                <p
+                  class="text-base font-extralight text-paragraph group-hover:text-white dark:text-dark-75 dark:group-hover:text-black"
+                >
+                  {{ service.description }}
+                </p>
               </div>
             </div>
           </div>
@@ -704,35 +899,67 @@
       <section id="portfolio" class="pt-8 pb-16 md:pt-4 md:pb-8">
         <div class="container">
           <div class="mb-8 md:mb-6">
-            <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
+            <div
+              class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
+            >
               <h3 class="text-2xl uppercase tracking-widest md:text-xl">Portfolio</h3>
             </div>
           </div>
-          <div class="grid grid-cols-3 gap-x-7 gap-y-10 sm-grid-cols-1 md:grid-cols-2 md:gap-y-8 md:gap-x-6">
+          <div
+            class="grid grid-cols-3 gap-x-7 gap-y-10 sm-grid-cols-1 md:grid-cols-2 md:gap-y-8 md:gap-x-6"
+          >
             <div class="relative group" v-for="(project, key) in projects" :key="key">
-                <div class="h-project overflow-hidden rounded-xl bg-dark-100 border border-paragraph border-opacity-0 bg-opacity-10 dark:border-none dark:bg-white relative md:h-80">
-                  <img :src="`/projects/${project.image}`" loading="lazy" :alt="project.name" class="w-full h-full object-cover rounded-xl object-top" />
-                </div>
-                <div class="mt-7 px-2">
-                  <ul class="flex items-center flex-wrap gap-x-2 gap-y-2.5 mb-4">
-                    <li v-for="(skill, index) in project.skills" class="dark:text-black dark:bg-white text-white bg-dark-100 bg-opacity-90 dark:bg-opacity-100 py-1 px-3 rounded-lg text-xs tracking-wide" :key="index">{{ skill }}</li>
-                  </ul>
-                  <div class="flex items-center justify-between">
-                    <h4 class="leading-none text-lg text-black dark:text-white font-medium tracking-wider transition-colors group-hover:text-primary">{{ project.name }}</h4>
-                    <span class="w-6 h-6 flex items-center justify-center text-black dark:text-white transition-colors group-hover:text-primary">
-                      <ArrowRightIcon class="w-full stroke-2 stroke-black dark:stroke-white transform -rotate-45 transition-colors group-hover:stroke-primary" />
-                    </span>
-                  </div>
-                </div>
-                <a :href="project.link" target="_blank" :aria-label="project.name" class="absolute inset-0 z-10"></a>
+              <div
+                class="h-project overflow-hidden rounded-xl bg-dark-100 border border-paragraph border-opacity-0 bg-opacity-10 dark:border-none dark:bg-white relative md:h-80"
+              >
+                <img
+                  :src="`/projects/${project.image}`"
+                  loading="lazy"
+                  :alt="project.name"
+                  class="w-full h-full object-cover object-top"
+                />
               </div>
+              <div class="mt-7 px-2">
+                <ul class="flex items-center flex-wrap gap-x-2 gap-y-2.5 mb-4">
+                  <li
+                    v-for="(skill, index) in project.skills"
+                    class="dark:text-black dark:bg-white text-white bg-dark-100 bg-opacity-90 dark:bg-opacity-100 py-1 px-3 rounded-lg text-xs tracking-wide"
+                    :key="index"
+                  >
+                    {{ skill }}
+                  </li>
+                </ul>
+                <div class="flex items-center justify-between">
+                  <h4
+                    class="leading-none text-lg text-black dark:text-white font-medium tracking-wider transition-colors group-hover:text-primary"
+                  >
+                    {{ project.name }}
+                  </h4>
+                  <span
+                    class="w-6 h-6 flex items-center justify-center text-black dark:text-white transition-colors group-hover:text-primary"
+                  >
+                    <ArrowRightIcon
+                      class="w-full stroke-2 stroke-black dark:stroke-white transform -rotate-45 transition-colors group-hover:stroke-primary"
+                    />
+                  </span>
+                </div>
+              </div>
+              <a
+                :href="project.link"
+                target="_blank"
+                :aria-label="project.name"
+                class="absolute inset-0 z-10"
+              ></a>
+            </div>
           </div>
         </div>
       </section>
       <section id="testimonials" class="pt-8 pb-16 md:pt-4 md:pb-8">
         <div class="container">
           <div class="mb-8 md:mb-6">
-            <div class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0">
+            <div
+              class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
+            >
               <h3 class="text-2xl uppercase tracking-widest md:text-xl">Testimonials</h3>
             </div>
           </div>
@@ -745,26 +972,39 @@
               delay: 2000,
               disableOnInteraction: false
             }"
-            :breakpoints= "{
+            :breakpoints="{
               768: {
                 slidesPerView: 2,
-                spaceBetween: 28,
+                spaceBetween: 28
               }
             }"
           >
             <swiper-slide v-for="(testimonial, key) in testimonials" :key="key">
-              <div class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl p-7 estimonials-shadow overflow-hidden md:p-5">
+              <div
+                class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl p-7 estimonials-shadow overflow-hidden md:p-5"
+              >
                 <div class="flex items-center gap-7 md:gap-5">
                   <div class="w-24 h-24 bg-primary rounded-lg overflow-hidden relative">
-                    <img :src="`/testimonials/${testimonial.author.image}`" loading="lazy" :alt="testimonial.author.name" class="w-full h-full object-cover object-center absolute"/>
+                    <img
+                      :src="`/testimonials/${testimonial.author.image}`"
+                      loading="lazy"
+                      :alt="testimonial.author.name"
+                      class="w-full h-full object-cover object-center absolute"
+                    />
                   </div>
                   <div class="flex-1">
-                    <h4 class="text-primary text-2xl md:text-xl mb-2.5 leading-none">{{ testimonial.author.name }}</h4>
-                    <span class="text-base text-paragraph dark:text-dark-75">{{ testimonial.author.title }}</span>
+                    <h4 class="text-primary text-2xl md:text-xl mb-2.5 leading-none">
+                      {{ testimonial.author.name }}
+                    </h4>
+                    <span class="text-base text-paragraph dark:text-dark-75">{{
+                      testimonial.author.title
+                    }}</span>
                   </div>
                 </div>
                 <div class="mt-7 mb-4 md:mt-5 md:mb-3">
-                  <p class="text-lg text-paragraph dark:text-dark-75 font-extralight md:text-base">{{ testimonial.quote }}</p>
+                  <p class="text-lg text-paragraph dark:text-dark-75 font-extralight md:text-base">
+                    {{ testimonial.quote }}
+                  </p>
                 </div>
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2.5">
@@ -773,10 +1013,16 @@
                         <StarIcon class="w-full h-full" />
                       </span>
                     </div>
-                    <span class="text-xs text-paragraph dark:text-dark-75 leading-none pt-1">{{ testimonial.reviews }} reviews</span>
+                    <span class="text-xs text-paragraph dark:text-dark-75 leading-none pt-1"
+                      >{{ testimonial.reviews }} reviews</span
+                    >
                   </div>
                   <div class="w-10 h-10">
-                    <img src="/quote.webp" :alt="testimonial.author.name" class="w-full h-full brightness-50 dark:brightness-100"/>
+                    <img
+                      src="/quote.webp"
+                      :alt="testimonial.author.name"
+                      class="w-full h-full brightness-50 dark:brightness-100"
+                    />
                   </div>
                 </div>
               </div>
@@ -788,49 +1034,123 @@
         <div class="container">
           <div class="flex items-start justify-between gap-10 md:flex-col md:gap-8">
             <div class="w-1/2 md:w-full">
-              <span class="uppercase text-xs leading-none text-white bg-dark-100 bg-opacity-90 dark:bg-opacity-100 dark:text-black dark:bg-white rounded-lg tracking-wide py-3 px-4 inline-block">Get In Touch</span>
-              <h2 class="text-5xl mt-4 mb-4 leading-tight md:text-4xl md:leading-tight">Let's collaborate to create outstanding web experiences.</h2>
-              <p class="text-paragraph dark:text-dark-75 font-extralight text-base leading-normal mb-10 md:mb-6">If you would like to work with us or just want to get in touch, we'd love <br /> to hear from you!</p>
-              <a href="//api.whatsapp.com/send?phone=212627329145" target="_blank" class="text-primary text-3xl font-medium underline md:text-2xl">+212 627329145</a>
+              <span
+                class="uppercase text-xs leading-none text-white bg-dark-100 bg-opacity-90 dark:bg-opacity-100 dark:text-black dark:bg-white rounded-lg tracking-wide py-3 px-4 inline-block"
+                >Get In Touch</span
+              >
+              <h2 class="text-5xl mt-4 mb-4 leading-tight md:text-4xl md:leading-tight">
+                Let's collaborate to create outstanding web experiences.
+              </h2>
+              <p
+                class="text-paragraph dark:text-dark-75 font-extralight text-base leading-normal mb-10 md:mb-6"
+              >
+                If you would like to work with us or just want to get in touch, we'd love <br />
+                to hear from you!
+              </p>
+              <a
+                href="//api.whatsapp.com/send?phone=212627329145"
+                target="_blank"
+                class="text-primary text-3xl font-medium underline md:text-2xl"
+                >+212 627329145</a
+              >
             </div>
             <div class="flex-1 md:w-full">
-              <div v-if="emailResponse.status" class="rounded-lg p-4 mb-7 md:mb-5" :class="[ emailResponse.type === 'success' ? 'bg-success-50' : 'bg-error-50']">
-                <p class="leading-normal" :class="[ emailResponse.type === 'success' ? 'text-success-100' : 'text-error-100']">{{ emailResponse.message }}</p>
+              <div
+                v-if="emailResponse.status"
+                class="rounded-lg p-4 mb-7 md:mb-5"
+                :class="[emailResponse.type === 'success' ? 'bg-success-50' : 'bg-error-50']"
+              >
+                <p
+                  class="leading-normal"
+                  :class="[
+                    emailResponse.type === 'success' ? 'text-success-100' : 'text-error-100'
+                  ]"
+                >
+                  {{ emailResponse.message }}
+                </p>
               </div>
               <form @submit.prevent="sendMessage" class="grid gap-7 md:gap-5">
                 <div class="flex items-center gap-7 md:flex-col md:gap-5">
                   <div class="flex-1 md:w-full">
-                    <input v-model="form.name" type="text" class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" placeholder="Name" required/>
+                    <input
+                      v-model="form.name"
+                      type="text"
+                      class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100"
+                      placeholder="Name"
+                      required
+                    />
                   </div>
                   <div class="flex-1 md:w-full">
-                    <input v-model="form.from_name" type="email" class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" placeholder="Email" required/>
+                    <input
+                      v-model="form.from_name"
+                      type="email"
+                      class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100"
+                      placeholder="Email"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="flex-1">
-                  <input v-model="form.subject" type="text" class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" placeholder="Subject" />
+                  <input
+                    v-model="form.subject"
+                    type="text"
+                    class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100"
+                    placeholder="Subject"
+                  />
                 </div>
                 <div class="flex-1">
-                  <textarea v-model="form.message" class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100" rows="8" placeholder="Message" required />
+                  <textarea
+                    v-model="form.message"
+                    class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100"
+                    rows="8"
+                    placeholder="Message"
+                    required
+                  />
                 </div>
                 <div class="flex-1">
-                  <button type="submit" class="relative overflow-hidden border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 uppercase text-black dark:text-white tracking-widest bg-transparent px-4 py-5 leading-none flex items-center justify-center rounded-lg w-full group transition-colors duration-500 dark:hover:text-black hover:text-black h-14  outline-none" :class="{ 'sending cursor-not-allowed': sending }">
+                  <button
+                    type="submit"
+                    class="relative overflow-hidden border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 uppercase text-black dark:text-white tracking-widest bg-transparent px-4 py-5 leading-none flex items-center justify-center rounded-lg w-full group transition-colors duration-500 dark:hover:text-black hover:text-black h-14 outline-none"
+                    :class="{ 'sending cursor-not-allowed': sending }"
+                  >
                     Send a message
-                    <span v-if="!sending" class="absolute inset-0 w-1.5 bg-primary transition-all duration-500 group-hover:w-full -z-10"></span>
+                    <span
+                      v-if="!sending"
+                      class="absolute inset-0 w-1.5 bg-primary transition-all duration-500 group-hover:w-full -z-10"
+                    ></span>
                   </button>
                 </div>
               </form>
             </div>
           </div>
         </div>
-        <div class="absolute inset-0 -z-10 pointer-events-none bg-center bg-no-repeat" :style="{ 'backgroundImage': 'url(paper-plane.webp)', 'backgroundSize': '27%', 'opacity': '.008' }">
-        </div>
+        <div
+          class="absolute inset-0 -z-10 pointer-events-none bg-center bg-no-repeat"
+          :style="{
+            backgroundImage: 'url(paper-plane.webp)',
+            backgroundSize: '27%',
+            opacity: '.008'
+          }"
+        ></div>
       </section>
     </main>
-    <footer class="border-t border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 py-7 md:py-5">
+    <footer
+      class="border-t border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 py-7 md:py-5"
+    >
       <div class="container">
-        <span class="leading-none flex items-center justify-center text-center gap-1 text-paragraph dark:text-dark-75">
+        <span
+          class="leading-none flex items-center justify-center text-center gap-1 text-paragraph dark:text-dark-75"
+        >
           <CopyrightIcon class="w-3.5 h-3.5 md:w-3 md:h-3" />
-          <span class="font-extralight text-sm md:text-xs md:text-center">{{ new Date().getFullYear() }} Othmane Gourirran is Powered by <a href="https://www.upwork.com/freelancers/~01aebf796030857cd1" target="_blank" class="text-primary underline hover:brightness-105">Othmane</a></span>
+          <span class="font-extralight text-sm md:text-xs md:text-center"
+            >{{ new Date().getFullYear() }} Othmane Gourirran is Powered by
+            <a
+              href="https://www.upwork.com/freelancers/~01aebf796030857cd1"
+              target="_blank"
+              class="text-primary underline hover:brightness-105"
+              >OthmaneG</a
+            ></span
+          >
         </span>
       </div>
     </footer>
