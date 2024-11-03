@@ -773,7 +773,7 @@ export default {
                   <p
                     class="text-lg font-extralight leading-8 md:text-base text-paragraph dark:text-dark-75"
                   >
-                    🌟 100% Job Success Front-end Developer on Upwork <br />
+                    🌟 Top Rated | 100% Job Success Front-end Developer on Upwork <br />
                     🌟 Prime Quality work and Effective communication throughout the complete
                     development process are my core values. <br />
                     Are you looking for a Vue js Developer, React js developer, Next js developer,
