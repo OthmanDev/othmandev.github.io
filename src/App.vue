@@ -11,12 +11,14 @@ import LinkedinIcon from './components/icons/LinkedincIcon.vue'
 import GithubIcon from './components/icons/GithubIcon.vue'
 import EmailIcon from './components/icons/EmailIcon.vue'
 import ArrowRightIcon from './components/icons/ArrowRightIcon.vue'
-import BootstrapIcon from './components/icons/skills/BootstrapIcon.vue'
 import CssIcon from './components/icons/skills/CssIcon.vue'
 import HtmlIcon from './components/icons/skills/HtmlIcon.vue'
 import JiraIcon from './components/icons/skills/JiraIcon.vue'
 import JsIcon from './components/icons/skills/JsIcon.vue'
+import NextjsIcon from './components/icons/skills/NextjsIcon.vue'
 import ReactIcon from './components/icons/skills/ReactIcon.vue'
+import ShopifyIcon from './components/icons/skills/ShopifyIcon.vue'
+import SvelteIcon from './components/icons/skills/SvelteIcon.vue'
 import TailwindcssIcon from './components/icons/skills/TailwindcssIcon.vue'
 import UxIcon from './components/icons/skills/UxIcon.vue'
 import VueIcon from './components/icons/skills/VueIcon.vue'
@@ -36,12 +38,14 @@ export default {
     GithubIcon,
     EmailIcon,
     ArrowRightIcon,
-    BootstrapIcon,
     CssIcon,
     HtmlIcon,
     JiraIcon,
     JsIcon,
+    NextjsIcon,
     ReactIcon,
+    ShopifyIcon,
+    SvelteIcon,
     TailwindcssIcon,
     UxIcon,
     VueIcon,
@@ -55,15 +59,9 @@ export default {
       loading: true,
       experiences: [
         {
-          period: '04/21 - Present',
-          company: 'Protect',
-          role: 'Front-End Engineer',
-          link: 'https://protect.inc'
-        },
-        {
-          period: '04/21 - Present',
+          period: '04/21 - 10/26',
           company: 'Le ventures',
-          role: 'Front-End Developer',
+          role: 'Front-End Engineer',
           link: 'https://leventures.com'
         },
         {
@@ -86,9 +84,24 @@ export default {
           progress: 80
         },
         {
+          title: 'Next.js',
+          icon: 'NextjsIcon',
+          progress: 85
+        },
+        {
           title: 'VueJs',
           icon: 'VueIcon',
           progress: 95
+        },
+        {
+          title: 'SvelteKit',
+          icon: 'SvelteIcon',
+          progress: 85
+        },
+        {
+          title: 'Shopify',
+          icon: 'ShopifyIcon',
+          progress: 90
         },
         {
           title: 'Ux Design',
@@ -103,7 +116,7 @@ export default {
         {
           title: 'TailwindCss',
           icon: 'TailwindcssIcon',
-          progress: 90
+          progress: 100
         },
         {
           title: 'HTML5',
@@ -114,11 +127,6 @@ export default {
           title: 'CSS3',
           icon: 'CssIcon',
           progress: 100
-        },
-        {
-          title: 'Bootstrap',
-          icon: 'BootstrapIcon',
-          progress: 95
         },
         {
           title: 'Jira',
@@ -191,7 +199,7 @@ export default {
         },
         {
           image: 'hypefury.webp',
-          skills: ['VueJs', 'TailwindCss'],
+          skills: ['Next.js', 'TailwindCss'],
           name: 'Hypefury',
           link: 'https://hypefury.com'
         },
@@ -403,9 +411,7 @@ export default {
     <Loader :class="{ 'slide-out': !loading }" />
     <ScrollToTop />
     <SwitchTheme />
-    <header
-      class="py-2.5 md:border-b md:border-dark-75 dark:md:border-dark-75 md:border-opacity-50 dark:md:border-opacity-10"
-    >
+    <header class="py-2.5 md:border-b md:border-dark-75/50 dark:md:border-dark-75/10">
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="flex items-center justify-between md:w-full">
@@ -695,7 +701,7 @@ export default {
                         href="https://facebook.com/othman.gourriran"
                         target="_blank"
                         aria-label="Othmane Gourirran Facebook"
-                        class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black"
+                        class="w-10 h-10 rounded-full border border-paragraph/20 dark:border-white/10 flex items-center justify-center text-black dark:text-white transition-all duration-500 hover:bg-dark-100/90 hover:text-white dark:hover:bg-white dark:hover:text-black"
                       >
                         <FacebookIcon class="w-3.5 h-3.5" />
                       </a>
@@ -705,7 +711,7 @@ export default {
                         href="https://www.linkedin.com/in/othmane-gourirran-2932a5127"
                         aria-label="Othmane Gourirran Linkedin"
                         target="_blank"
-                        class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black"
+                        class="w-10 h-10 rounded-full border border-paragraph/20 dark:border-white/10 flex items-center justify-center text-black dark:text-white transition-all duration-500 hover:bg-dark-100/90 hover:text-white dark:hover:bg-white dark:hover:text-black"
                       >
                         <LinkedinIcon class="w-3.5 h-3.5" />
                       </a>
@@ -715,7 +721,7 @@ export default {
                         href="https://github.com/OthmanDev"
                         target="_blank"
                         aria-label="Othmane Gourirran Github"
-                        class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black"
+                        class="w-10 h-10 rounded-full border border-paragraph/20 dark:border-white/10 flex items-center justify-center text-black dark:text-white transition-all duration-500 hover:bg-dark-100/90 hover:text-white dark:hover:bg-white dark:hover:text-black"
                       >
                         <GithubIcon class="w-3.5 h-3.5" />
                       </a>
@@ -725,7 +731,7 @@ export default {
                         href="mailto:othmandeveloppeur@gmail.com"
                         target="_blank"
                         aria-label="Othmane Gourirran Email"
-                        class="w-10 h-10 rounded-full border border-paragraph border-opacity-20 dark:border-white flex items-center justify-center text-black dark:text-white dark:border-opacity-10 transition-all duration-500 hover:bg-dark-100 bg-opacity-90 dark:bg-opacity-100 hover:text-white dark:hover:bg-white dark:hover:text-black"
+                        class="w-10 h-10 rounded-full border border-paragraph/20 dark:border-white/10 flex items-center justify-center text-black dark:text-white transition-all duration-500 hover:bg-dark-100/90 hover:text-white dark:hover:bg-white dark:hover:text-black"
                       >
                         <EmailIcon class="w-3.5 h-3.5" />
                       </a>
@@ -738,21 +744,21 @@ export default {
               <div class="grid gap-16 md:gap-8">
                 <h1 class="text-6xl leading-normal md:text-4xl md:leading-normal md:text-center">
                   Hello, I’m <span class="text-primary">Othmane Gourirran</span>. A senior
-                  <span class="bord">Front-End Developer<i></i></span> Based in Morocco.
+                  <span class="bord">Front-End Engineer</span> Based in Morocco.
                 </h1>
                 <div class="flex items-center gap-20 md:grid md:grid-cols-2 md:gap-6">
                   <div class="flex items-center gap-5 md:gap-3">
-                    <h2 class="text-7xl md:text-5xl">8+</h2>
+                    <h2 class="text-7xl md:text-5xl">10+</h2>
                     <p class="text-base font-extralight text-paragraph dark:text-dark-75">
                       Years <br />
                       of Experience
                     </p>
                   </div>
                   <div class="flex items-center gap-5 md:gap-3">
-                    <h2 class="text-7xl md:text-5xl">40</h2>
+                    <h2 class="text-7xl md:text-5xl">60</h2>
                     <p class="text-base font-extralight text-paragraph dark:text-dark-75">
-                      Clients <br />
-                      Worldwide
+                      Production <br />
+                      builds
                     </p>
                   </div>
                   <div class="md:col-span-2">
@@ -766,42 +772,35 @@ export default {
                 </div>
                 <div id="about" class="grid gap-5 md:gap-4">
                   <div
-                    class="border-b border-paragraph dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0 dark:border-white"
+                    class="border-b border-paragraph/10 dark:border-white/10 pb-5 md:pb-0 md:border-0"
                   >
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">About</h3>
                   </div>
                   <p
                     class="text-lg font-extralight leading-8 md:text-base text-paragraph dark:text-dark-75"
                   >
-                    🌟 Top Rated | 100% Job Success Front-end Developer on Upwork <br />
-                    🌟 Prime Quality work and Effective communication throughout the complete
-                    development process are my core values. <br />
-                    Are you looking for a Vue js Developer, React js developer, Next js developer,
-                    or a Senior Front-end Developer? Then you’re at your required destination.
-                    <br />
-                    🖐 I’m a Senior Front-end Developer (Vue js development) with 8 years of
-                    experience in developing pixel-perfect responsive web applications<br />
-                    🖐 I’m a Senior Front-end Developer (React js development, Next js development)
-                    with 4+ years of experience in developing pixel-perfect responsive web
-                    applications
+                    I'm Othmane, a senior front-end engineer and Vue.js, React.js, Next.js, and
+                    SvelteKit specialist. Remote since 2017, I help founders, agencies, and product
+                    teams ship fast, pixel-perfect web apps, Shopify stores and apps, and AI-powered
+                    front-end features.
                   </p>
                 </div>
                 <div class="grid gap-8 md:gap-6">
                   <div
-                    class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
+                    class="border-b border-paragraph/10 dark:border-white/10 pb-5 md:pb-0 md:border-0"
                   >
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">
-                      Experience Porfessional
+                      Experience Professional
                     </h3>
                   </div>
                   <div class="grid gap-6 md:gap-5">
                     <div
                       v-for="(experience, key) in experiences"
-                      class="flex items-center justify-between gap-12 md:gap-5 md:pb-5 border-b border-paragraph dark:border-white pb-6 dark:border-opacity-10 border-opacity-10 sm:flex-col sm:border sm:rounded-lg sm:p-4"
+                      class="flex items-center justify-between gap-12 md:gap-5 md:pb-5 border-b border-paragraph/10 dark:border-white/10 pb-6 sm:flex-col sm:border sm:rounded-lg sm:p-4"
                       :key="key"
                     >
                       <div
-                        class="rounded-lg py-2 text-center text-xs text-white dark:text-black w-date bg-dark-100 bg-opacity-90 dark:bg-white"
+                        class="rounded-lg py-2 text-center text-xs text-white dark:text-black w-date bg-dark-100/90 dark:bg-white"
                       >
                         {{ experience.period }}
                       </div>
@@ -833,14 +832,14 @@ export default {
                 </div>
                 <div class="grid gap-8 md:gap-6">
                   <div
-                    class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
+                    class="border-b border-paragraph/10 dark:border-white/10 pb-5 md:pb-0 md:border-0"
                   >
                     <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">Skills</h3>
                   </div>
                   <div class="grid grid-cols-3 gap-7 md:grid-cols-2 md:gap-5 sm-grid-cols-1">
                     <div
                       v-for="(skill, key) in skills"
-                      class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl px-7 pt-7 md:px-5 md:pt-5"
+                      class="relative border border-paragraph/10 dark:border-white/10 rounded-xl px-7 pt-7 md:px-5 md:pt-5"
                       :key="key"
                     >
                       <div class="flex items-center gap-5 mb-7 md:mb-5">
@@ -849,17 +848,6 @@ export default {
                         </div>
                         <h4 class="text-lg capitalize">{{ skill.title }}</h4>
                       </div>
-                      <div class="h-progress relative bg-dark-100 dark:bg-white bg-opacity-10">
-                        <div
-                          class="bg-dark-100 dark:bg-white h-full absolute transition-all duration-500"
-                          :data-progress="skill.progress"
-                          :style="{ width: skill.progress + '%' }"
-                        ></div>
-                      </div>
-                      <span
-                        class="absolute top-2.5 right-2.5 text-badge text-white dark:text-black bg-dark-100 dark:bg-white px-2.5 py-1 rounded-full bg-opacity-90"
-                        >{{ skill.progress }}%</span
-                      >
                     </div>
                   </div>
                 </div>
@@ -871,15 +859,13 @@ export default {
       <section id="services" class="pt-8 pb-16 md:pt-4 md:pb-8">
         <div class="container">
           <div class="grid gap-8 md:gap-6">
-            <div
-              class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
-            >
+            <div class="border-b border-paragraph/10 dark:border-white/10 pb-5 md:pb-0 md:border-0">
               <h3 class="text-2xl uppercase tracking-widest font-light md:text-xl">Services</h3>
             </div>
             <div class="grid grid-cols-4 gap-7 md:grid-cols-2 md:gap-5 sm-grid-cols-1">
               <div
                 v-for="(service, key) in services"
-                class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl p-7 md:p-5 transition-all duration-300 hover:bg-dark-100 hover:text-white dark:hover:bg-white dark:hover:text-black hover:border-opacity-100 group scale-100 hover:scale-105 ease-in-out"
+                class="relative border border-paragraph/10 dark:border-white/10 rounded-xl p-7 md:p-5 transition-all duration-300 hover:bg-dark-100 hover:text-white hover:border-paragraph dark:hover:bg-white dark:hover:text-black dark:hover:border-white group scale-100 hover:scale-105 ease-in-out"
                 :key="key"
               >
                 <div class="flex flex-col gap-3 mb-2">
@@ -899,9 +885,7 @@ export default {
       <section id="portfolio" class="pt-8 pb-16 md:pt-4 md:pb-8">
         <div class="container">
           <div class="mb-8 md:mb-6">
-            <div
-              class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
-            >
+            <div class="border-b border-paragraph/10 dark:border-white/10 pb-5 md:pb-0 md:border-0">
               <h3 class="text-2xl uppercase tracking-widest md:text-xl">Portfolio</h3>
             </div>
           </div>
@@ -910,7 +894,7 @@ export default {
           >
             <div class="relative group" v-for="(project, key) in projects" :key="key">
               <div
-                class="h-project overflow-hidden rounded-xl bg-dark-100 border border-paragraph border-opacity-0 bg-opacity-10 dark:border-none dark:bg-white relative md:h-80"
+                class="h-project overflow-hidden rounded-xl bg-dark-100/10 border border-paragraph/0 dark:border-none dark:bg-white/10 relative md:h-80"
               >
                 <img
                   :src="`/projects/${project.image}`"
@@ -923,7 +907,7 @@ export default {
                 <ul class="flex items-center flex-wrap gap-x-2 gap-y-2.5 mb-4">
                   <li
                     v-for="(skill, index) in project.skills"
-                    class="dark:text-black dark:bg-white text-white bg-dark-100 bg-opacity-90 dark:bg-opacity-100 py-1 px-3 rounded-lg text-xs tracking-wide"
+                    class="dark:text-black dark:bg-white text-white bg-dark-100/90 py-1 px-3 rounded-lg text-xs tracking-wide"
                     :key="index"
                   >
                     {{ skill }}
@@ -957,9 +941,7 @@ export default {
       <section id="testimonials" class="pt-8 pb-16 md:pt-4 md:pb-8">
         <div class="container">
           <div class="mb-8 md:mb-6">
-            <div
-              class="border-b border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 pb-5 md:pb-0 md:border-0"
-            >
+            <div class="border-b border-paragraph/10 dark:border-white/10 pb-5 md:pb-0 md:border-0">
               <h3 class="text-2xl uppercase tracking-widest md:text-xl">Testimonials</h3>
             </div>
           </div>
@@ -981,7 +963,7 @@ export default {
           >
             <swiper-slide v-for="(testimonial, key) in testimonials" :key="key">
               <div
-                class="relative border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-xl p-7 estimonials-shadow overflow-hidden md:p-5"
+                class="relative border border-paragraph/10 dark:border-white/10 rounded-xl p-7 estimonials-shadow overflow-hidden md:p-5"
               >
                 <div class="flex items-center gap-7 md:gap-5">
                   <div class="w-24 h-24 bg-primary rounded-lg overflow-hidden relative">
@@ -1035,7 +1017,7 @@ export default {
           <div class="flex items-start justify-between gap-10 md:flex-col md:gap-8">
             <div class="w-1/2 md:w-full">
               <span
-                class="uppercase text-xs leading-none text-white bg-dark-100 bg-opacity-90 dark:bg-opacity-100 dark:text-black dark:bg-white rounded-lg tracking-wide py-3 px-4 inline-block"
+                class="uppercase text-xs leading-none text-white bg-dark-100/90 dark:text-black dark:bg-white rounded-lg tracking-wide py-3 px-4 inline-block"
                 >Get In Touch</span
               >
               <h2 class="text-5xl mt-4 mb-4 leading-tight md:text-4xl md:leading-tight">
@@ -1075,7 +1057,7 @@ export default {
                     <input
                       v-model="form.name"
                       type="text"
-                      class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100"
+                      class="border border-paragraph/10 dark:border-white/10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black/30 dark:placeholder:text-white/30 placeholder:font-light duration-500 transition-all focus:border-paragraph dark:focus:border-white"
                       placeholder="Name"
                       required
                     />
@@ -1084,7 +1066,7 @@ export default {
                     <input
                       v-model="form.from_name"
                       type="email"
-                      class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100"
+                      class="border border-paragraph/10 dark:border-white/10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black/30 dark:placeholder:text-white/30 placeholder:font-light duration-500 transition-all focus:border-paragraph dark:focus:border-white"
                       placeholder="Email"
                       required
                     />
@@ -1094,14 +1076,14 @@ export default {
                   <input
                     v-model="form.subject"
                     type="text"
-                    class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100"
+                    class="border border-paragraph/10 dark:border-white/10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black/30 dark:placeholder:text-white/30 placeholder:font-light duration-500 transition-all focus:border-paragraph dark:focus:border-white"
                     placeholder="Subject"
                   />
                 </div>
                 <div class="flex-1">
                   <textarea
                     v-model="form.message"
-                    class="border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black dark:placeholder:text-white placeholder:text-opacity-30 placeholder:font-light duration-500 transition-all focus:border-opacity-100"
+                    class="border border-paragraph/10 dark:border-white/10 rounded-lg outline-none bg-transparent p-4 w-full placeholder:text-black/30 dark:placeholder:text-white/30 placeholder:font-light duration-500 transition-all focus:border-paragraph dark:focus:border-white"
                     rows="8"
                     placeholder="Message"
                     required
@@ -1110,7 +1092,7 @@ export default {
                 <div class="flex-1">
                   <button
                     type="submit"
-                    class="relative overflow-hidden border border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 uppercase text-black dark:text-white tracking-widest bg-transparent px-4 py-5 leading-none flex items-center justify-center rounded-lg w-full group transition-colors duration-500 dark:hover:text-black hover:text-black h-14 outline-none"
+                    class="relative overflow-hidden border border-paragraph/10 dark:border-white/10 uppercase text-black dark:text-white tracking-widest bg-transparent px-4 py-5 leading-none flex items-center justify-center rounded-lg w-full group transition-colors duration-500 dark:hover:text-black hover:text-black h-14 outline-none"
                     :class="{ 'sending cursor-not-allowed': sending }"
                   >
                     Send a message
@@ -1134,9 +1116,7 @@ export default {
         ></div>
       </section>
     </main>
-    <footer
-      class="border-t border-paragraph dark:border-white dark:border-opacity-10 border-opacity-10 py-7 md:py-5"
-    >
+    <footer class="border-t border-paragraph/10 dark:border-white/10 py-7 md:py-5">
       <div class="container">
         <span
           class="leading-none flex items-center justify-center text-center gap-1 text-paragraph dark:text-dark-75"
