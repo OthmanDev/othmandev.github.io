@@ -35,7 +35,7 @@
   }
   .sending:before {
     content: "";
-    @apply rounded-full w-6 h-6 border-2 border-white border-opacity-0;
+    @apply rounded-full w-6 h-6 border-2 border-white/0;
     border-top-color: #000;
     animation: 1.5s spin infinite linear;
   }
