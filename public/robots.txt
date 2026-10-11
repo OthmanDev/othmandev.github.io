@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://othmandev.github.io/sitemap.xml
